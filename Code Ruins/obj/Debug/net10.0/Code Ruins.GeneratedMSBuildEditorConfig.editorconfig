@@ -1,0 +1,187 @@
+is_global = true
+build_property.AvaloniaNameGeneratorIsEnabled = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.AvaloniaNameGeneratorViewFileNamingStrategy = NamespaceAndClassName
+build_property.AvaloniaNameGeneratorAttachDevTools = true
+build_property.AvaloniaUseCompiledBindingsByDefault = true
+build_property.AvaloniaMainPackageVersion = 12.0.5
+build_property.AvaloniaPreviewerNetCoreToolPath = C:\Users\user\.nuget\packages\avalonia\12.0.5\buildTransitive\\..\tools\net8.0\designer\Avalonia.Designer.HostApp.dll
+build_property.TargetFramework = net10.0
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.EntryPointFilePath = 
+build_property.RootNamespace = Code_Ruins
+build_property.ProjectDir = C:\Users\user\Desktop\c#_document\Code Ruins\Code Ruins\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Views/CodeEditor.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Views/IntroducePage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Views/MainGamePage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Views/StartPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Views/UserControl1.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/avalonia-logo.ico]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/DMan1.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/DMan2.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/DMan3.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/LMan1.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/LMan2.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/LMan3.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/RMan1.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/RMan2.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/RMan3.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/UMan1.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/UMan2.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/ManAction/UMan3.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/City Backround Layer9.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/CodeRuinsTitle.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/Computers.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/Dummy.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneOne1.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneOne2.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneOne3.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneOne4.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneOne5.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneOne6.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneOnePlatform.paint]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneOnePlatform.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneOnePlatformSuccess.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneTwo.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneTwo1.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneTwo2.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneTwo3.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneTwo4.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneTwo5.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneTwo7.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/SceneTwo8.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/StartBackground1.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/StartBackground2.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/StartBackground3.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/StartBackground4.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/StartC\#.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/Pictures/WastedServers.png]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource
+
+[C:/Users/user/Desktop/c\#_document/Code Ruins/Code Ruins/Assets/zpix.ttf]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaResource

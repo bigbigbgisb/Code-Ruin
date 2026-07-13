@@ -1,0 +1,27 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="using:Code_Ruins.ViewModels"
+             mc:Ignorable="d" 
+             x:Class="Code_Ruins.IntroducePage"
+             Background="#000000"  
+             x:DataType="viewmodels:MainWindowViewModel"
+             >
+  <Grid>
+      <Grid.RowDefinitions>
+          <RowDefinition Height="3*"></RowDefinition>
+          <RowDefinition Height="2*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <Image x:Name="Picture" Grid.Row="0" Grid.RowSpan="2" Source="{Binding ChattingResource.RecentImage}" Stretch="Fill"></Image>
+      <Rectangle IsVisible="False" x:Name="Curtain" Fill="#000000" ZIndex="999999" Height="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0"  Grid.RowSpan="2"></Rectangle>
+      <Border ZIndex="999" Grid.Row="1" x:Name="ChattingBox" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderThickness="3" BorderBrush="{Binding ThemeViewModel.LightFillColor}" PointerPressed="ChattingBox_PointerPressed" Margin="10,10,10,10">
+            <Grid>
+                 <TextBlock FontSize="20" FontFamily="/Assets/#Zpix"  x:Name="ChattingTextBlock" Text="" Foreground="{Binding ThemeViewModel.NeonGreen}" Margin="30,30,30,30"></TextBlock>
+                 <TextBlock FontSize="20" FontFamily="/Assets/#Zpix" Text="▼" Foreground="{Binding ThemeViewModel.NeonGreen}" Margin="20,20,20,20" HorizontalAlignment="Right" VerticalAlignment="Bottom"></TextBlock>
+            </Grid>
+         
+       </Border>
+  </Grid>
+    
+</UserControl>

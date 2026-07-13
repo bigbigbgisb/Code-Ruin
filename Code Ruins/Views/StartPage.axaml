@@ -1,0 +1,42 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Code_Ruins.ViewModels"
+             SizeChanged="UserControl_SizeChanged"
+             mc:Ignorable="d"
+             x:DataType="vm:MainWindowViewModel"
+             x:Class="Code_Ruins.StartPage">
+       <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <Grid x:Name="StartGrid" PointerMoved="Grid_PointerMoved">
+       <Grid.RowDefinitions>
+           <RowDefinition Height="*"></RowDefinition>
+           <RowDefinition Height="*"></RowDefinition>
+           <RowDefinition Height="2*"></RowDefinition>
+       </Grid.RowDefinitions>
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="*"></ColumnDefinition>
+           <ColumnDefinition Width="*"></ColumnDefinition>
+           <ColumnDefinition Width="*"></ColumnDefinition>
+       </Grid.ColumnDefinitions>
+       
+        <Rectangle IsVisible="False" x:Name="Curtain" Fill="#000000" ZIndex="999999" Height="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"></Rectangle>
+        <Image x:Name="ImageBackground1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="3" Source="/Assets/Pictures/StartBackground1.png" Margin="-50" 
+               ></Image>
+        <Image x:Name="ImageBackground2" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="3" Source="/Assets/Pictures/StartBackground2.png" Margin="-50"
+               ></Image>
+        <Image x:Name="ImageBackground3" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="3" Source="/Assets/Pictures/StartBackground3.png" Margin="-50" 
+               ></Image>
+        <Image x:Name="ImageBackground4" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="3" Source="/Assets/Pictures/StartBackground4.png" Margin="-50" 
+               ></Image>
+        
+        
+        
+       <Image Grid.Row="1" Grid.Column="1"  Source="/Assets/Pictures/CodeRuinsTitle.png" ></Image>
+       <Button x:Name="Start" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" FontSize="10" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}" Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" BorderThickness="1" Height="40" Width="100" Content="开始征程" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" Click="Start_Click"></Button>
+   </Grid>
+</UserControl>

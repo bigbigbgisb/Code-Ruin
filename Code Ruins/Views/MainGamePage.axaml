@@ -1,0 +1,57 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="using:Code_Ruins.ViewModels"
+             
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Code_Ruins.MainGamePage"
+             x:DataType="viewmodels:MainWindowViewModel"
+             Loaded="UserControl_Loaded"
+             KeyDown="UserControl_KeyDown"
+             KeyUp="UserControl_KeyUp"
+             
+             >
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+                <RowDefinition Height="3*" /> <!-- 外层 Row 0 -->
+                <RowDefinition Height="2*" />    <!-- 外层 Row 1 -->
+            </Grid.RowDefinitions>
+        <Border ZIndex="9999" Grid.Row="1" x:Name="ChattingBox" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderThickness="3" BorderBrush="{Binding ThemeViewModel.LightFillColor}" PointerPressed="ChattingBox_PointerPressed" Margin="10,10,10,10" >
+            <Grid>
+                 <TextBlock FontSize="20" FontFamily="/Assets/#Zpix"  x:Name="ChattingTextBlock" Text="" Foreground="{Binding ThemeViewModel.NeonGreen}" Margin="30,30,30,30"></TextBlock>
+                 <TextBlock FontSize="20" FontFamily="/Assets/#Zpix" Text="▼" Foreground="{Binding ThemeViewModel.NeonGreen}" Margin="20,20,20,20" HorizontalAlignment="Right" VerticalAlignment="Bottom"></TextBlock>
+            </Grid>
+         
+       </Border>
+        <Grid x:Name="SceneOne" Grid.Row="0" PointerMoved="SceneOne_PointerMoved">
+            
+            <Grid Grid.Row="0">
+                <Image x:Name="SceneOne1" Source="/Assets/Pictures/SceneOne1.png" Stretch="UniformToFill" Margin="-80,-80,-80,-20"></Image>
+                <Image x:Name="SceneOne2" Source="/Assets/Pictures/SceneOne2.png" Stretch="UniformToFill" Margin="-80,-80,-80,-20"></Image>
+                <Image x:Name="SceneOne3" Source="/Assets/Pictures/SceneOne3.png" Stretch="UniformToFill" Margin="-80,-80,-80,-20"></Image>
+                <Image x:Name="SceneOne4" Source="/Assets/Pictures/SceneOne4.png" Stretch="UniformToFill" Margin="-80,-80,-80,-20"></Image>
+                <Image x:Name="SceneOne5" Source="/Assets/Pictures/SceneOne5.png" Stretch="UniformToFill" Margin="-80,-80,-80,-20"></Image>
+                <Image x:Name="SceneOne6" Source="/Assets/Pictures/SceneOne6.png" Stretch="UniformToFill" Margin="-80,-80,-80,-20"></Image>
+            </Grid>
+            
+        </Grid>
+        <Grid Grid.Row="0" Grid.RowSpan="2"  ClipToBounds="True" Margin="0,0,0,0">
+            <Image x:Name="Character" Source="/Assets/ManAction/RMan2.png" HorizontalAlignment="Center" RenderOptions.BitmapInterpolationMode="None" VerticalAlignment="Center" ZIndex="999" Height="50"></Image>
+            <Border x:Name="ActionPrompt" VerticalAlignment="Bottom" Margin="0,0,0,70"    Background="{Binding ThemeViewModel.OpacityDarkFillColor}" Height="50" Width="300"  ZIndex="999" BorderThickness="0" >
+                <Grid>
+                    <TextBlock  Foreground="{Binding ThemeViewModel.LightForeground}" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="/Assets/#Zpix" FontSize="40" Text="["></TextBlock>
+                    <TextBlock x:Name="ActionPromptText" Foreground="{Binding ThemeViewModel.LightForeground}" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/Assets/#Zpix" FontSize="10" Text=""></TextBlock>
+                    <TextBlock  Foreground="{Binding ThemeViewModel.LightForeground}" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="/Assets/#Zpix" FontSize="40" Text="]"></TextBlock>
+                </Grid>
+                
+            </Border>
+            <Image x:Name="SceneOnePlatform" Source="/Assets/Pictures/SceneOnePlatform.png"  RenderOptions.BitmapInterpolationMode="None" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" ></Image>
+        </Grid>
+
+        
+        
+     
+        
+    </Grid>
+</UserControl>

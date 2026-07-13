@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:controls="using:Material.Styles.Controls"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Code_Ruins.ViewModels"
+        xmlns:ursa ="https://irihi.tech/ursa"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
+        x:Class="Code_Ruins.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Code_Ruins"
+        WindowState="FullScreen"
+        >
+    
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border ZIndex="999999999" Opacity="50" Background="{Binding ThemeViewModel.DarkFillColor}" HorizontalAlignment="Left"   Width="400" Grid.Row="0" CornerRadius="0,25,25,0" RenderTransformOrigin="0.5,0">
+            <Border.RenderTransform>
+                <TranslateTransform  X="{Binding SnackBarViewModel.OffsetX}" Y="0" />
+            </Border.RenderTransform>
+            <TextBlock Margin="10,0,0,0" VerticalAlignment="Center" FontSize="15" Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" Text="{Binding SnackBarViewModel.RecentAchivement}"></TextBlock>
+        </Border>
+        <Grid Grid.Row="0" Grid.RowSpan="2">
+            
+            <ContentControl Name="MainContent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="{Binding RecentPage}"/>
+            
+        </Grid>
+    </Grid>
+
+</Window>

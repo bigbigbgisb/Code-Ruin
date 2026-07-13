@@ -1,0 +1,12 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:avalonia="using:Material.Avalonia"
+             xmlns:semi="https://irihi.tech/semi"
+             xmlns:u-semi="https://irihi.tech/ursa/themes/semi"
+             x:Class="Code_Ruins.App">
+    <Application.Styles>
+        <avalonia:MaterialAvaloniaTemplates></avalonia:MaterialAvaloniaTemplates>
+        <semi:SemiTheme Locale="zh-CN"></semi:SemiTheme>
+        <u-semi:SemiTheme Locale="zh-CN"></u-semi:SemiTheme>
+    </Application.Styles>
+</Application>
