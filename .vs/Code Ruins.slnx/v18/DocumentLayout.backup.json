@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\maingamepage.interact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\maingamepage.interact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\maingamepage.viewportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\maingamepage.viewportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\maingamepage.task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\maingamepage.task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\maingamepage.movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\maingamepage.movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\maingamepage.init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\maingamepage.init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\maingamepage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\maingamepage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\chipcodeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\chipcodeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\maingamepage.input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\maingamepage.input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\maingamepage.map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\maingamepage.map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\maingamepage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\maingamepage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\chipcodeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\chipcodeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\introducepage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\snackbarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\snackbarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|solutionrelative:code ruins\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{624BB773-FEE4-92D4-9F0C-D186B9304B71}|Code Ruins\\Code Ruins.csproj|c:\\users\\user\\desktop\\c#_document\\code ruins\\code ruins\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,11 +105,11 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 325,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -93,7 +121,85 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainGamePage.Map.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Map.cs",
+              "RelativeDocumentMoniker": "Code Ruins\\Views\\MainGamePage.Map.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Map.cs",
+              "RelativeToolTip": "Code Ruins\\Views\\MainGamePage.Map.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T08:28:36.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainGamePage.Init.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Init.cs",
+              "RelativeDocumentMoniker": "Code Ruins\\Views\\MainGamePage.Init.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Init.cs",
+              "RelativeToolTip": "Code Ruins\\Views\\MainGamePage.Init.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T08:11:32.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainGamePage.Task.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Task.cs",
+              "RelativeDocumentMoniker": "Code Ruins\\Views\\MainGamePage.Task.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Task.cs",
+              "RelativeToolTip": "Code Ruins\\Views\\MainGamePage.Task.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T08:06:39.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainGamePage.Input.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Input.cs",
+              "RelativeDocumentMoniker": "Code Ruins\\Views\\MainGamePage.Input.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Input.cs",
+              "RelativeToolTip": "Code Ruins\\Views\\MainGamePage.Input.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwC0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:23:57.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainGamePage.Interact.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Interact.cs",
+              "RelativeDocumentMoniker": "Code Ruins\\Views\\MainGamePage.Interact.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Interact.cs",
+              "RelativeToolTip": "Code Ruins\\Views\\MainGamePage.Interact.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwF0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:10:06.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MainGamePage.ViewportController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.ViewportController.cs",
+              "RelativeDocumentMoniker": "Code Ruins\\Views\\MainGamePage.ViewportController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.ViewportController.cs",
+              "RelativeToolTip": "Code Ruins\\Views\\MainGamePage.ViewportController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwDkAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:00:17.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ChipCodeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\ChipCodeViewModel.cs",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\ChipCodeViewModel.cs",
@@ -101,24 +207,22 @@
               "RelativeToolTip": "Code Ruins\\Views\\ChipCodeViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T01:33:40.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-10T01:33:40.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "CodeEditor.axaml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\CodeEditor.axaml",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\CodeEditor.axaml",
               "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\CodeEditor.axaml",
               "RelativeToolTip": "Code Ruins\\Views\\CodeEditor.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-09T07:30:16.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T07:30:16.986Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "CodeEditor.axaml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\CodeEditor.axaml.cs",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\CodeEditor.axaml.cs",
@@ -126,12 +230,11 @@
               "RelativeToolTip": "Code Ruins\\Views\\CodeEditor.axaml.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAgwFEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T07:30:16.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T07:30:16.51Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "SnackBarViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\SnackBarViewModel.cs",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\SnackBarViewModel.cs",
@@ -139,12 +242,11 @@
               "RelativeToolTip": "Code Ruins\\Views\\SnackBarViewModel.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T03:27:32.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T03:27:32.514Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "MainGamePage.axaml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.axaml",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\MainGamePage.axaml",
@@ -156,20 +258,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "MainGamePage.axaml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.axaml.cs",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\MainGamePage.axaml.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.axaml.cs",
               "RelativeToolTip": "Code Ruins\\Views\\MainGamePage.axaml.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAiwD4AAAByAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwB8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-07T02:32:29.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "ChattingResource.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\ChattingResource.cs",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\ChattingResource.cs",
@@ -177,12 +279,11 @@
               "RelativeToolTip": "Code Ruins\\Views\\ChattingResource.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAACmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T00:45:44.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T00:45:44.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "Code Ruins.csproj",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Code Ruins.csproj",
               "RelativeDocumentMoniker": "Code Ruins\\Code Ruins.csproj",
@@ -190,12 +291,11 @@
               "RelativeToolTip": "Code Ruins\\Code Ruins.csproj",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-07-06T14:50:54.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T14:50:54.273Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "AvaloniaBuildTasks.targets",
               "DocumentMoniker": "C:\\Users\\user\\.nuget\\packages\\avalonia\\12.0.5\\buildTransitive\\AvaloniaBuildTasks.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\avalonia\\12.0.5\\buildTransitive\\AvaloniaBuildTasks.targets",
@@ -203,24 +303,35 @@
               "RelativeToolTip": "..\\..\\..\\.nuget\\packages\\avalonia\\12.0.5\\buildTransitive\\AvaloniaBuildTasks.targets",
               "ViewState": "AgIAAFYAAAAAAAAAAIBZwG4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-07-06T14:44:51.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T14:44:51.591Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "IntroducePage.axaml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\IntroducePage.axaml",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\IntroducePage.axaml",
               "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\IntroducePage.axaml",
               "RelativeToolTip": "Code Ruins\\Views\\IntroducePage.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-06T11:38:32.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T11:38:32.402Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "MainGamePage.Movement.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Movement.cs",
+              "RelativeDocumentMoniker": "Code Ruins\\Views\\MainGamePage.Movement.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainGamePage.Movement.cs",
+              "RelativeToolTip": "Code Ruins\\Views\\MainGamePage.Movement.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAYwLgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T06:53:38.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "IntroducePage.axaml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\IntroducePage.axaml.cs",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\IntroducePage.axaml.cs",
@@ -228,24 +339,22 @@
               "RelativeToolTip": "Code Ruins\\Views\\IntroducePage.axaml.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAYwCkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T11:38:32.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T11:38:32.288Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "App.axaml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\App.axaml",
               "RelativeDocumentMoniker": "Code Ruins\\App.axaml",
               "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\App.axaml",
               "RelativeToolTip": "Code Ruins\\App.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-06T11:02:35.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T11:02:35.367Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "Code Ruins\\ViewModels\\MainWindowViewModel.cs",
@@ -253,12 +362,11 @@
               "RelativeToolTip": "Code Ruins\\ViewModels\\MainWindowViewModel.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAwCsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T09:22:29.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T09:22:29.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "ThemeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\ThemeViewModel.cs",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\ThemeViewModel.cs",
@@ -266,24 +374,22 @@
               "RelativeToolTip": "Code Ruins\\Views\\ThemeViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T10:25:05.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T10:25:05.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "StartPage.axaml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\StartPage.axaml",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\StartPage.axaml",
               "ToolTip": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\StartPage.axaml",
               "RelativeToolTip": "Code Ruins\\Views\\StartPage.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-06T09:45:11.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T09:45:11.303Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "StartPage.axaml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\StartPage.axaml.cs",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\StartPage.axaml.cs",
@@ -291,12 +397,11 @@
               "RelativeToolTip": "Code Ruins\\Views\\StartPage.axaml.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwCQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T09:45:11.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T09:45:11.181Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\c#_document\\Code Ruins\\Code Ruins\\Views\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "Code Ruins\\Views\\MainWindow.axaml.cs",
@@ -304,8 +409,7 @@
               "RelativeToolTip": "Code Ruins\\Views\\MainWindow.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T09:23:42.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T09:23:42.739Z"
             },
             {
               "$type": "Document",

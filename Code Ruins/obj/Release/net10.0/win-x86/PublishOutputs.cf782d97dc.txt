@@ -1,0 +1,7 @@
+D:\Code Ruin Publish\Code Ruins.pdb
+D:\Code Ruin Publish\av_libglesv2.dll
+D:\Code Ruin Publish\libHarfBuzzSharp.dll
+D:\Code Ruin Publish\libHarfBuzzSharp.pdb
+D:\Code Ruin Publish\libSkiaSharp.dll
+D:\Code Ruin Publish\libSkiaSharp.pdb
+D:\Code Ruin Publish\Code Ruins.exe
