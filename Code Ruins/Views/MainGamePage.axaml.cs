@@ -75,13 +75,13 @@ public partial class MainGamePage : UserControl
 
     private void UserControl_KeyDown(object? sender, KeyEventArgs e)
     {
-        UpdateMovementKeyUpState(e);
+        UpdateMovementKeyDownState(e);
         UpdateTaskKeyState(e);
     }
 
     private void UserControl_KeyUp(object? sender, KeyEventArgs e)
     {
-        UpdateMovementKeyDownState(e);
+        UpdateMovementKeyUpState(e);
 
     }
 
@@ -90,7 +90,6 @@ public partial class MainGamePage : UserControl
     {
 
         await OuttingSentence();
-        
     }
 
     

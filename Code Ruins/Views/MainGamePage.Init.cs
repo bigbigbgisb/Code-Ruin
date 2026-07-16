@@ -29,13 +29,7 @@ namespace Code_Ruins
             MapInit();
             InteractInit();
 
-            
-
-
-
-
-
-            //隐藏现实的成就
+            //隐藏成就
             await Task.Delay(4000);
             (DataContext as MainWindowViewModel).SnackBarViewModel.HideSnackBarCommand.Execute(null);
             (DataContext as MainWindowViewModel).SnackBarViewModel.RecentAchivement = "";

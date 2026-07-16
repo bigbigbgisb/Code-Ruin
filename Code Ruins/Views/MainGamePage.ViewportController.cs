@@ -52,15 +52,17 @@ namespace Code_Ruins
 
         void ViewportControllerInit()
         {
+            
+            //设置行走图片
+            SceneOneImages = new() { SceneOne1, SceneOne2, SceneOne3, SceneOne4, SceneOne5, SceneOne6 };
             //设置原始偏移点与偏移量
             SceneOnePlatform.RenderTransformOrigin = new RelativePoint(0.5, 0.5, RelativeUnit.Relative);
             SceneOnePlatform.RenderTransform = new TranslateTransform(0, 0);
-            SceneOneImages = new() { SceneOne1, SceneOne2, SceneOne3, SceneOne4, SceneOne5, SceneOne6 };
             foreach (Image image in SceneOneImages)
             {
                 image.RenderTransformOrigin = new RelativePoint(0.5, 0.5, RelativeUnit.Relative);
             }
-            //设置行走图片
+            
             
         }
     }

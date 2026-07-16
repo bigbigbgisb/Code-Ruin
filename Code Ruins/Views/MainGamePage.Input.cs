@@ -8,7 +8,7 @@ namespace Code_Ruins
 {
     public partial class MainGamePage
     {
-        void UpdateMovementKeyUpState(KeyEventArgs e)
+        void UpdateMovementKeyDownState(KeyEventArgs e)
         {
             if (e.Key == Key.W)
             {
@@ -27,7 +27,7 @@ namespace Code_Ruins
                 isRight = true;
             }
         }
-        void UpdateMovementKeyDownState(KeyEventArgs e)
+        void UpdateMovementKeyUpState(KeyEventArgs e)
         {
             if (e.Key == Key.W)
             {

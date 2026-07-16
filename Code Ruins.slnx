@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/解决方案项/">
+    <File Path="Logger.cs" />
+  </Folder>
   <Project Path="Code Ruins/Code Ruins.csproj" />
 </Solution>
