@@ -1,0 +1,48 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             x:Class="Code_Ruins.Views.CodeWiki_QuestionsPage"
+             Background="{Binding ThemeViewModel.LightFillColor}"
+             xmlns:viewmodels="using:Code_Ruins.ViewModels"
+             x:DataType="viewmodels:MainWindowViewModel"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+         <ContentControl Grid.RowSpan="2" x:Name="OverridePage" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ZIndex="10000"></ContentControl>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+                <TextBlock Margin="20" VerticalAlignment="Bottom" Text="Newest Questions" FontSize="30" FontFamily="/Assets/#Zpix"></TextBlock>
+                <TextBlock Margin="20,20,0,20" VerticalAlignment="Bottom" Text="{Binding WikiContentResource.WikiContentCount}" FontSize="15" FontFamily="/Assets/#Zpix"></TextBlock>
+                <TextBlock  Margin="5,20,20,20" VerticalAlignment="Bottom" Text="questions" FontSize="15" FontFamily="/Assets/#Zpix"></TextBlock>
+            </StackPanel>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" >
+            
+                <ItemsControl ItemsSource="{Binding WikiContentResource.WikiContentsResource}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderThickness="0,0,0,2" Background="{Binding $parent[ItemsControl].DataContext.ThemeViewModel.OpacityColor}" BorderBrush="{Binding $parent[ItemsControl].DataContext.ThemeViewModel.OpacityDarkFillColor}" HorizontalAlignment="Stretch">
+                                
+                                <Grid Margin="20,20,0,60" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                                    <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                                        <Button Padding="0" Background="{Binding $parent[ItemsControl].DataContext.ThemeViewModel.OpacityColor}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Tag="{Binding Id}" Click="ShowWikiDetail">
+                                            <TextBlock FontFamily="/Assets/#Zpix" Foreground="{Binding $parent[ItemsControl].DataContext.ThemeViewModel.TipBlue}" TextDecorations="Underline"  TextAlignment="Left" FontSize="20" Text="{Binding Title}"></TextBlock>
+                                        </Button>
+
+                                        <TextBlock FontFamily="/Assets/#Zpix" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Foreground="{Binding $parent[ItemsControl].DataContext.ThemeViewModel.Black}" TextAlignment="Left" FontSize="10" Text="{Binding PreviewContent}"></TextBlock> 
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            
+        </ScrollViewer>
+        
+        
+        
+    </Grid>
+</UserControl>

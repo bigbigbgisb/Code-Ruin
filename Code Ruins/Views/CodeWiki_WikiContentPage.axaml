@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             x:Class="Code_Ruins.Views.CodeWiki_WikiContentPage"
+             Background="{Binding ThemeViewModel.LightFillColor}"
+             xmlns:viewmodels="using:Code_Ruins.ViewModels"
+             x:DataType="viewmodels:MainWindowViewModel"
+             >
+    <Grid>
+       <Grid.RowDefinitions>
+           <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+       </Grid.RowDefinitions>
+        <Button x:Name="Back" Click="Back_Click" Grid.Row="0" Content="⬅ 返回" FontFamily="/Assets/#Zpix" Background="{Binding ThemeViewModel.OpacityColor}" Foreground="{Binding ThemeViewModel.OrangeFillColor}" Height="40"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Margin="20,40,40,0"></Button>
+        <StackPanel Grid.Row="1">
+            <TextBlock x:Name="Title" TextWrapping="Wrap" FontWeight="Bold" FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.Black}" Text="" FontSize="30" Margin="40,40,40,0"></TextBlock>
+            <TextBlock x:Name="Id" FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.Black}" Text="" FontSize="12" Margin="40,10,40,5"></TextBlock>
+            <TextBlock TextWrapping="Wrap" LineSpacing="10" x:Name="Content" FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.Black}"  Text="" FontSize="15" Margin="40,5,40,0"></TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

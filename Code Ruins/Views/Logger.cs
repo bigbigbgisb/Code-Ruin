@@ -5,30 +5,34 @@ using System.Text;
 
 namespace Code_Ruins.Views
 {
-    internal class Log(string saveRootPath,string saveFolderName)
+    public static class Log
     {
-        string _saveRootPath = saveRootPath;
-        string _saveFolderName = saveFolderName;
-        
+        private static string? _saveRootPath = null;
+        private static string? _saveFolderName = null;
 
-        void Write(string message,string type)
+        public static void Init(string saveRootPath, string saveFolderName)
+        { 
+            _saveRootPath = saveRootPath;
+            _saveFolderName = saveFolderName;
+        }
+        private static void Write(string message,string type)
         {
             string savePath = Path.Combine(_saveRootPath, _saveFolderName);
             Directory.CreateDirectory(savePath);
             string timeNow = DateTime.Now.ToString("yyMMdd");
-            string detailTimeNow = DateTime.Now.ToString("yyMMdd_HHmm");
-            string fullMessage = $"[ {detailTimeNow} ] {type} : {message} + {Environment.NewLine}";
+            string detailTimeNow = DateTime.Now.ToString("yy-MM-dd HH:mm");
+            string fullMessage = $"[ {detailTimeNow} ] {type} : {message} {Environment.NewLine}";
             File.AppendAllText(Path.Combine(savePath, (timeNow + ".log")), fullMessage);
         }
-        public void Information(string message)
+        public static void Information(string message)
         {
             Write(message, "Info");
         }
-        public void Warning(string message)
+        public static void Warning(string message)
         {
             Write(message, "Warn");
         }
-        public void Error(string message)
+        public static void Error(string message)
         {
             Write(message, "Error");
         }

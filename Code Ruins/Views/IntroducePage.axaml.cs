@@ -5,6 +5,7 @@ using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using Code_Ruins.ViewModels;
+using Code_Ruins.Views;
 using SkiaSharp;
 using System;
 using System.Linq;
@@ -17,18 +18,29 @@ public partial class IntroducePage : UserControl
 {
     private int index = 0;
     private bool isOuting = false;
+    private MainWindowViewModel mwvm;
+
+
     public IntroducePage()
     {
         InitializeComponent();
+        Loaded += IntroducePage_Loaded;
+    }
+
+    private void IntroducePage_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        mwvm = (DataContext as MainWindowViewModel);
     }
 
     private async void ChattingBox_PointerPressed(object? sender, Avalonia.Input.PointerPressedEventArgs e)
     {
         if (!isOuting)
         {
-            if (index == (DataContext as MainWindowViewModel).ChattingResource.ChattingText[(DataContext as MainWindowViewModel).ChattingResource.RecentStage].Length)
+            if (index == mwvm.ChattingResource.ChattingText[mwvm.ChattingResource.RecentStage].Length)
             {
+                Log.Information("IntroducePage 已输出所有介绍内容");
                 Curtain.IsVisible = true;
+                index = 0;
                 while (true)
                 {
                     Curtain.Height += 30;
@@ -40,31 +52,44 @@ public partial class IntroducePage : UserControl
 
                 }
                 await Task.Delay(2000);
-                (DataContext as MainWindowViewModel).RecentPage = (DataContext as MainWindowViewModel).MainGamePage;
+                mwvm.RecentPage = mwvm.MainGamePage;
+
                 return;
 
             }
-            (DataContext as MainWindowViewModel).ChattingResource.RecentImage = new Bitmap((DataContext as MainWindowViewModel).ChattingResource.ChattingImage[(DataContext as MainWindowViewModel).ChattingResource.RecentStage][index]);
-
+            Log.Information($"IntroducePage 目前输出{mwvm.ChattingResource.RecentStage}的第{index+1}句话");
+            if (mwvm.ChattingResource.ChattingImage[mwvm.ChattingResource.RecentStage][index] != null)
+            {
+                mwvm.ChattingResource.RecentImage = new Bitmap(mwvm.ChattingResource.ChattingImage[mwvm.ChattingResource.RecentStage][index]);
+            }
+            
             //打字机效果
             isOuting = true;
-            for (int i = 0; i <= (DataContext as MainWindowViewModel).ChattingResource.ChattingText[(DataContext as MainWindowViewModel).ChattingResource.RecentStage][index].Length; i++)
+
+            for (int i = 0; i <= mwvm.ChattingResource.ChattingText[mwvm.ChattingResource.RecentStage][index].Message.Length; i++)
             {
                 if (isOuting)
                 {
-                    ChattingTextBlock.Text = (DataContext as MainWindowViewModel).ChattingResource.ChattingText[(DataContext as MainWindowViewModel).ChattingResource.RecentStage][index][0..i];
-                    await Task.Delay(100);
+                    ChattingTextBlock.Text = mwvm.ChattingResource.ChattingText[mwvm.ChattingResource.RecentStage][index].Message[0..i];
+                    await Task.Delay(mwvm.BaseSettingsViewModel.TypingSpeed);
                 }
                 else
                 {
-                    ChattingTextBlock.Text = (DataContext as MainWindowViewModel).ChattingResource.ChattingText[(DataContext as MainWindowViewModel).ChattingResource.RecentStage][index];
+                    ChattingTextBlock.Text = mwvm.ChattingResource.ChattingText[mwvm.ChattingResource.RecentStage][index].Message;
+                    Log.Information($"IntroducePage {mwvm.ChattingResource.RecentStage}的第{index + 1}句话被打断");
+                    
                     break;
                 }
                 
             }
+            
+            
             isOuting = false;
-
+            mwvm.ChattingResource.ChattingText[mwvm.ChattingResource.RecentStage][index].Function();
+            Log.Information($"IntroducePage {mwvm.ChattingResource.RecentStage}的第{index + 1}句话输出完毕");
             index++;
+            
+           
         }
         else
         {

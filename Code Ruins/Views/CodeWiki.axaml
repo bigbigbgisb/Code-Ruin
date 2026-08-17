@@ -1,0 +1,66 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:viewmodels="using:Code_Ruins.ViewModels"
+        x:Class="Code_Ruins.Views.CodeWiki"
+        Background="{Binding ThemeViewModel.OpacityColor}"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        WindowDecorations="BorderOnly"
+        ExtendClientAreaToDecorationsHint="True"
+        x:DataType="viewmodels:MainWindowViewModel"
+        Title="CodeWiki">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Background="{Binding ThemeViewModel.LightFillColor}" CornerRadius="5" Grid.ColumnSpan="2" Grid.RowSpan="2"></Border>
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="{Binding ThemeViewModel.OpacityColor}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" PointerPressed="TitleBar_PointerPressed"></Border>
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BorderThickness="0,0,0,2" BorderBrush="{Binding ThemeViewModel.OpacityDarkFillColor}">
+            <StackPanel  Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid Margin="20,20,20,20"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="50"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="50"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Image Source="/Assets/Pictures/StackBelowFlowIcon.png"  Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" RenderOptions.BitmapInterpolationMode="None"></Image>
+                    <TextBlock FontFamily="/Assets/#Zpix" FontWeight="Bold" Foreground="{Binding ThemeViewModel.OrangeFillColor}" FontSize="20" Text="Stack BelowFlow" VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Margin="4,0,0,0" FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.OrangeFillColor}" FontSize="10" Padding="0" Text="for Personal User" VerticalAlignment="Center"></TextBlock>
+                    <Button Margin="10,0,0,0" Content="About" FontFamily="/Assets/#Zpix"  FontSize="10" Height="15" Width="100" Background="{Binding ThemeViewModel.LightFillColor}" Foreground="{Binding ThemeViewModel.Black}"></Button>
+                </StackPanel>
+                <Image Height="20" RenderOptions.BitmapInterpolationMode="None"  Grid.Column="1"  Source="/Assets/Pictures/Search.png" HorizontalAlignment="Right"></Image>
+                <TextBox FontFamily="/Assets/#Zpix" Grid.Column="2" HorizontalAlignment="Stretch"  Margin="0,0,40,0" x:Name="SearchBar" Background="{Binding ThemeViewModel.LightFillColor}" BorderThickness="2" BorderBrush="{Binding ThemeViewModel.OrangeFillColor}" KeyDown="SerachBar_KeyDown"  ></TextBox>
+                <Button x:Name="Mini" Click="Mini_Click" Grid.Column="3"  Background="{Binding ThemeViewModel.LightFillColor}" Content="-" Padding="0" Foreground="{Binding ThemeViewModel.Black}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ></Button>
+                
+            </Grid>
+            
+        </StackPanel>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="0"  BorderThickness="0,0,2,0" BorderBrush="{Binding ThemeViewModel.OpacityDarkFillColor}">
+            <ScrollViewer Margin="40,40,10,40"   VerticalScrollBarVisibility="Visible">
+            <StackPanel  Orientation="Vertical" >
+                <Button x:Name="Home" Click="Home_Click" Background="{Binding ThemeViewModel.LightFillColor}" FontSize="12" Margin="0,0,20,0" FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.Black}" Content="Home" HorizontalAlignment="Stretch" ></Button>
+                <Button x:Name="Questions" Click="Questions_Click" Background="{Binding ThemeViewModel.LightFillColor}" FontSize="12" Margin="0,10,20,0" FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.Black}" Content="Questions" HorizontalAlignment="Stretch"></Button>
+                <Button x:Name="Tags" Click="Tags_Click" Background="{Binding ThemeViewModel.LightFillColor}" FontSize="12" Margin="0,10,20,0" FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.Black}" Content="Tags" HorizontalAlignment="Stretch"></Button>
+                <Button x:Name="Users" Click="Users_Click" Background="{Binding ThemeViewModel.LightFillColor}" FontSize="12" Margin="0,10,20,0" FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.Black}" Content="Users" HorizontalAlignment="Stretch"></Button>
+            </StackPanel>
+        </ScrollViewer>
+        </Border>
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <ContentControl  x:Name="RecentPageContentControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></ContentControl>
+        </Grid>
+        
+            
+
+    </Grid>
+</Window>

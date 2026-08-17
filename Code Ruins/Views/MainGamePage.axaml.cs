@@ -82,6 +82,7 @@ public partial class MainGamePage : UserControl
     private void UserControl_KeyUp(object? sender, KeyEventArgs e)
     {
         UpdateMovementKeyUpState(e);
+        
 
     }
 
@@ -92,5 +93,16 @@ public partial class MainGamePage : UserControl
         await OuttingSentence();
     }
 
-    
+    private void IdeButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        ToggleIde();
+    }
+
+    private void WikiButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        ToggleWiki();
+    }
+
+
+
 }

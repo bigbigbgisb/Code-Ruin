@@ -3,17 +3,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewmodels="using:Code_Ruins.ViewModels"
+        xmlns:edit ="using:AvaloniaEdit"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
         x:Class="Code_Ruins.CodeEditor"
         Title="CodeEditor"
         Background="Transparent"
         ExtendClientAreaTitleBarHeightHint="0"
         ExtendClientAreaToDecorationsHint="True"
+        WindowDecorations="BorderOnly"
         x:DataType="viewmodels:MainWindowViewModel"
             >
         <Grid>
-            <Border x:Name="TitleBar" Background="{Binding ThemeViewModel.Black}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="20" PointerPressed="TitleBar_PointerPressed"></Border>
-            <Grid Margin="0,20,0,0">
+            <Border x:Name="TitleBar" Background="{Binding ThemeViewModel.Black}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" PointerPressed="TitleBar_PointerPressed">
+                <Button x:Name="Mini" Click="Mini_Click" Background="{Binding ThemeViewModel.OpacityColor}" VerticalAlignment="Stretch" HorizontalAlignment="Right" Margin="10" Content="-"></Button>
+            </Border>
+            <Grid Margin="0,40,0,0">
             <Border Background="Transparent"  BorderThickness="5" BorderBrush="{Binding ThemeViewModel.Black}">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -41,9 +45,9 @@
                                          <TextBlock  FontSize="10"   FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
                                          VIM 10.1
                                      </TextBlock>
-                                     <TextBox Text="{Binding ChipCodeViewModel.ChipCode}" BorderThickness="0"  CaretBrush="{Binding ThemeViewModel.LightFillColor}"  FontSize="10" x:Name="ChipCode"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
+                                     <edit:TextEditor Document="{Binding ChipCodeViewModel.ChipCodeDocument}" WordWrap="False" ShowLineNumbers="True" BorderThickness="0"  IsReadOnly="True"  FontSize="10" x:Name="ChipCode"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
                                          
-                                     </TextBox>
+                                     </edit:TextEditor>
                                      </StackPanel>
                                      
                                  </ScrollViewer>
@@ -68,9 +72,9 @@
                                                 <TextBlock FontSize="10"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
                                                     VIM 10.1
                                                  </TextBlock>
-                                            <TextBox x:Name="PlayerCode" CaretBrush="{Binding ThemeViewModel.LightFillColor}" Text=""   FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" AcceptsReturn="True" AcceptsTab="True" BorderThickness="0">
+                                            <edit:TextEditor FontSize="10" KeyDown="PlayerCode_KeyDown" ShowLineNumbers="True" WordWrap="False" x:Name="PlayerCode"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}"  BorderThickness="0">
                                             
-                                            </TextBox>
+                                            </edit:TextEditor>
                                         </StackPanel>
                                         
                                             

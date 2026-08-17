@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             x:Class="Code_Ruins.Views.Settings"
+             xmlns:viewmodels="using:Code_Ruins.ViewModels"
+             x:DataType="viewmodels:MainWindowViewModel"
+             Background="{Binding ThemeViewModel.OpacityColor}"
+             >
+  <Grid>
+      <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Border Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{Binding ThemeViewModel.Black}">
+            <ScrollViewer>
+                <StackPanel Orientation="Vertical" Margin="30">
+                    <TextBlock Background="{Binding ThemeViewModel.OpacityColor}" LineSpacing="10" Margin="10,10,10,0" FontFamily="/Assets/#Zpix" Text="Microhard Wondows [版本 10.0.11451.4191]&#10;(ç) Microhard Corporation。保留权利。&#10;自检结果:&#10;  Memory : from 0x0721, required memory : 32.6MB&#10;  Successful Allocate 34.4MB for process 35680&#10;&#10;输入HELP获得帮助" Foreground="{Binding ThemeViewModel.NeonGreen}" FontSize="15"></TextBlock>
+                    <TextBlock x:Name="CommandHistory" LineSpacing="10" Foreground="{Binding ThemeViewModel.NeonGreen}" FontSize="15" Background="{Binding ThemeViewModel.OpacityColor}" Margin="30,0,30,0" FontFamily="/Assets/#Zpix" ></TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                         <TextBlock  VerticalAlignment="Center" Text="C:\Wondows\assembly\GAC &amp;0xFF; 32\System.Data>  " Background="{Binding ThemeViewModel.OpacityColor}" Foreground="{Binding ThemeViewModel.NeonGreen}" FontSize="15"  Margin="30,0,3,0" FontFamily="/Assets/#Zpix"></TextBlock>
+                        <TextBox BorderThickness="0" CaretBrush="{Binding ThemeViewModel.LightForeground}"  x:Name="TypeCodeArea" Background="{Binding ThemeViewModel.OpacityColor}" Foreground="{Binding ThemeViewModel.NeonGreen}" FontSize="15"  Margin="0,0,15,0" FontFamily="/Assets/#Zpix" KeyDown="TypeCodeArea_KeyDown"></TextBox>
+                    </StackPanel>
+                
+                </StackPanel>
+            </ScrollViewer>
+          
+          
+      </Border>
+     
+  </Grid>
+</UserControl>

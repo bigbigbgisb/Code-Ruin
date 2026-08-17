@@ -14,9 +14,11 @@
              >
     <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
-                <RowDefinition Height="3*" /> <!-- 外层 Row 0 -->
-                <RowDefinition Height="2*" />    <!-- 外层 Row 1 -->
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="2*" />    
             </Grid.RowDefinitions>
+        <TextBlock x:Name="FpsShower" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" IsVisible="{Binding IsFpsVisible}" ZIndex="999999999"></TextBlock>
+        <Image x:Name="Picture" ZIndex="9998" Grid.Row="0" Grid.RowSpan="2" Source="{Binding ChattingResource.RecentImage}"  Margin="100"></Image>
         <Border ZIndex="9999" Grid.Row="1" x:Name="ChattingBox" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderThickness="3" BorderBrush="{Binding ThemeViewModel.LightFillColor}" PointerPressed="ChattingBox_PointerPressed" Margin="10,10,10,10" >
             <Grid>
                  <TextBlock FontSize="20" FontFamily="/Assets/#Zpix"  x:Name="ChattingTextBlock" Text="" Foreground="{Binding ThemeViewModel.NeonGreen}" Margin="30,30,30,30"></TextBlock>
@@ -24,6 +26,7 @@
             </Grid>
          
        </Border>
+        <Border x:Name="Curtain" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Bottom" Background="{Binding ThemeViewModel.Black}" HorizontalAlignment="Stretch" Height="0" ZIndex="1000000000"></Border>
         <Grid x:Name="SceneOne" Grid.Row="0" PointerMoved="SceneOne_PointerMoved">
             
             <Grid Grid.Row="0">
@@ -46,9 +49,15 @@
                 </Grid>
                 
             </Border>
-            <Image x:Name="SceneOnePlatform" Source="/Assets/Pictures/SceneOnePlatform.png"  RenderOptions.BitmapInterpolationMode="None" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" ></Image>
+            
+            <Image x:Name="ScenePlatform" Source="/Assets/Pictures/SceneOnePlatform.png"  RenderOptions.BitmapInterpolationMode="None" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" ></Image>
+            <Image x:Name="ScenePlatformDecoration" ZIndex="1000" Source="/Assets/Pictures/Carne.png"  RenderOptions.BitmapInterpolationMode="None" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" ></Image>
         </Grid>
-
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50"> 
+            <Button Click="IdeButton_Click" Margin="20" x:Name="IdeButton" FontFamily="/Assets/#Zpix"  Height="50" Width="50" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}" Foreground="{Binding ThemeViewModel.LightForeground}" Content="&lt;/&gt;" Padding="0" IsVisible="False"></Button>
+            <Button Click="WikiButton_Click" Margin="20" x:Name="WikiButton" FontFamily="/Assets/#Zpix"  Height="50" Width="50" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}" Foreground="{Binding ThemeViewModel.LightForeground}" Content="W" Padding="0" IsVisible="False"></Button>
+        </StackPanel>
+        
         
         
      

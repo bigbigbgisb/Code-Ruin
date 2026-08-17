@@ -6,7 +6,10 @@
              x:Class="Code_Ruins.App">
     <Application.Styles>
         <avalonia:MaterialAvaloniaTemplates></avalonia:MaterialAvaloniaTemplates>
+        <StyleInclude Source="avares://Avalonia.Themes.Fluent/FluentTheme.xaml"/>
         <semi:SemiTheme Locale="zh-CN"></semi:SemiTheme>
         <u-semi:SemiTheme Locale="zh-CN"></u-semi:SemiTheme>
+        <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml" />
     </Application.Styles>
+
 </Application>

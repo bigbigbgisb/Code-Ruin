@@ -14,13 +14,9 @@ namespace Code_Ruins
     {
         private DispatcherTimer _gameLoopTimer;
         private DispatcherTimer _walkingTimer;
+        private MainWindowViewModel mwvm;
         async void Init()
         {
-            (DataContext as MainWindowViewModel).ChattingResource.RecentStage = "Tutorial";
-            //显示成就
-            (DataContext as MainWindowViewModel).SnackBarViewModel.RecentAchivement = "目前进度:第一次进入游戏~";
-            (DataContext as MainWindowViewModel).SnackBarViewModel.ShowSnackBarCommand.Execute(null);
-
             //初始化
             PublicInit();
             ViewportControllerInit();
@@ -28,17 +24,25 @@ namespace Code_Ruins
             MovementInit();
             MapInit();
             InteractInit();
+            //开对话
+            ResetAndShowChattingBox();
 
+            mwvm.ChattingResource.RecentStage = "Tutorial";
+            //显示成就
+            mwvm.SnackBarViewModel.RecentAchivement = "目前进度:第一次进入游戏~";
+            mwvm.SnackBarViewModel.ShowSnackBarCommand.Execute(null);
             //隐藏成就
             await Task.Delay(4000);
-            (DataContext as MainWindowViewModel).SnackBarViewModel.HideSnackBarCommand.Execute(null);
-            (DataContext as MainWindowViewModel).SnackBarViewModel.RecentAchivement = "";
+            mwvm.SnackBarViewModel.HideSnackBarCommand.Execute(null);
+            mwvm.SnackBarViewModel.RecentAchivement = "";
 
             
         }
 
         void PublicInit()
         {
+            //显性转换
+            mwvm = DataContext as MainWindowViewModel;
             //新建计时器对象
             _gameLoopTimer = new DispatcherTimer()
             {
@@ -53,6 +57,7 @@ namespace Code_Ruins
             _walkingTimer.Start();
             _gameLoopTimer.Tick += Loop;
             _gameLoopTimer.Start();
+
         }
 
         

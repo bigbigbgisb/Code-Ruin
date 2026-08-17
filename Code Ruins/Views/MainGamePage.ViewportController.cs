@@ -5,6 +5,7 @@ using Avalonia.Media;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Code_Ruins
 {
@@ -13,8 +14,11 @@ namespace Code_Ruins
         private List<Avalonia.Controls.Image> SceneOneImages;
         void BalanceImageSize()
         {
-            SceneOnePlatform.Width = Bounds.Width * 2.0;
-            SceneOnePlatform.Height = SceneOnePlatform.Width * (353.0 / 800.0);
+            //TODO:这里以后应该改成通用的ScenePlatfORm和ScenePlatformDecoration
+            ScenePlatform.Width = Bounds.Width * 2.0;
+            ScenePlatform.Height = ScenePlatform.Width * (353.0 / 800.0);
+            ScenePlatformDecoration.Width = Bounds.Width * 2.0;
+            ScenePlatformDecoration.Height = ScenePlatform.Width * (353.0 / 800.0);
         }
         void CalculateTilePosition()
         {
@@ -27,8 +31,8 @@ namespace Code_Ruins
         }
         void CalculateAndClampViewport()
         {
-            double maxX = Math.Abs(SceneOnePlatform.Bounds.Width - Bounds.Width);
-            double maxY = Math.Abs((SceneOnePlatform.Bounds.Height - Bounds.Height) / 2);
+            double maxX = Math.Abs(ScenePlatform.Bounds.Width - Bounds.Width);
+            double maxY = Math.Abs((ScenePlatform.Bounds.Height - Bounds.Height) / 2);
             double minX = 0;
             offsetX = (int)Math.Clamp(offsetX, -maxX, minX);
             offsetY = (int)Math.Clamp(offsetY, -maxY, maxY + 100);
@@ -56,8 +60,8 @@ namespace Code_Ruins
             //设置行走图片
             SceneOneImages = new() { SceneOne1, SceneOne2, SceneOne3, SceneOne4, SceneOne5, SceneOne6 };
             //设置原始偏移点与偏移量
-            SceneOnePlatform.RenderTransformOrigin = new RelativePoint(0.5, 0.5, RelativeUnit.Relative);
-            SceneOnePlatform.RenderTransform = new TranslateTransform(0, 0);
+            ScenePlatform.RenderTransformOrigin = new RelativePoint(0.5, 0.5, RelativeUnit.Relative);
+            ScenePlatform.RenderTransform = new TranslateTransform(0, 0);
             foreach (Image image in SceneOneImages)
             {
                 image.RenderTransformOrigin = new RelativePoint(0.5, 0.5, RelativeUnit.Relative);
@@ -65,5 +69,7 @@ namespace Code_Ruins
             
             
         }
+
+        
     }
 }

@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:viewmodels="using:Code_Ruins.ViewModels"
+             x:Class="Code_Ruins.Views.CodeWiki_HomePage"
+             x:DataType="viewmodels:MainWindowViewModel"
+             >
+        <Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,80,0">
+                <Image Source="/Assets/Pictures/StackBelowFlowIcon.png"  Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" RenderOptions.BitmapInterpolationMode="None"></Image>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{Binding ThemeViewModel.OrangeFillColor}" Text="Welcome to Stack BelowFlow Community!" FontFamily="/Assets/#Zpix" FontSize="30" Margin="0,40,0,0"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.OrangeFillColor}" Text="Try to click &lt;Questions&gt; or Search bar to start your Q&amp;A Tour" FontFamily="/Assets/#Zpix" FontSize="15" Margin="0,5,20,0"></TextBlock>
+                </StackPanel>
+                
+                
+
+            </StackPanel>
+            
+        </Grid>
+</UserControl>

@@ -22,6 +22,7 @@ namespace Code_Ruins.Views
                 OffsetX+=10;
                 await Task.Delay(16);
             }
+            
         }
         [RelayCommand]
         private async Task HideSnackBar()
