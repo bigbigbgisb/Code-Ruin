@@ -5,13 +5,19 @@ using Avalonia.Labs.Gif;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
+
 using Code_Ruins.ViewModels;
+using Code_Ruins.Views;
+
 using MsBox.Avalonia;
+
 using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+
 using Ursa.Controls;
+
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Code_Ruins;
@@ -27,19 +33,12 @@ public partial class StartPage : UserControl
     {
 
 
-        Curtain.IsVisible = true;
-        while (true)
+        await (DataContext as MainWindowViewModel)!.ShowThenHideCurtainAsync(1000, () =>
         {
-            Curtain.Height += 30;
-            await Task.Delay(16);
-            if (Curtain.Height > Bounds.Height)
-            {
-                break;
-            }
-        }
-        await Task.Delay(2000);
-        (DataContext as MainWindowViewModel).ChattingResource.RecentStage = "Introduce";
-        (DataContext as MainWindowViewModel).RecentPage = (DataContext as MainWindowViewModel).IntroducePage;
+            (DataContext as MainWindowViewModel)!.ChattingResource.RecentStage = "Introduce";
+            (DataContext as MainWindowViewModel)!.RecentPage = (DataContext as MainWindowViewModel)!.IntroducePage;
+        });
+        
     }
 
     private void Grid_PointerMoved(object? sender, Avalonia.Input.PointerEventArgs e)
@@ -61,9 +60,14 @@ public partial class StartPage : UserControl
 
     private async void Settings_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        
-        await MessageBoxManager.GetMessageBoxStandard("警告 - 进入命令行", "程序崩溃。退出码:0xffffffff。请进入命令行修改具体设置。\n错误编号: 0xF1A7n错误类型: 系统调用失败 (NT_STATUS_INVALID_SYSTEM_SERVICE)").ShowWindowDialogAsync((App.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow);
-        
-        OverridePage.Content = (DataContext as MainWindowViewModel).Settings;
+        if ((App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow is not MainWindow mainWindow) { return; }
+        await MessageBoxManager.GetMessageBoxStandard("警告 - 进入命令行", "程序崩溃。退出码:0xffffffff。请进入命令行修改具体设置。\n错误编号: 0xF1A7n错误类型: 系统调用失败 (NT_STATUS_INVALID_SYSTEM_SERVICE)").ShowWindowDialogAsync(mainWindow);
+        OverridePage.Content = (DataContext as MainWindowViewModel)!.Settings;
+    }
+
+    private void Quit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        if ((App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime) is not IClassicDesktopStyleApplicationLifetime lifetime) { Log.Warning("异常退出，生命周期未找到，使用Environment.Exit"); Environment.Exit(0); return; }
+        lifetime.Shutdown();
     }
 }

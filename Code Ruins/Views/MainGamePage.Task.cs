@@ -1,9 +1,12 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Media.Imaging;
 using Avalonia.Threading;
+
 using AvaloniaEdit.Document;
+
 using Code_Ruins.ViewModels;
 using Code_Ruins.Views;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +14,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+
 using Ursa.Controls;
 
 namespace Code_Ruins
@@ -18,12 +22,14 @@ namespace Code_Ruins
     public partial class MainGamePage
     {
 
-        private string recentTask;
-        private bool isInTaskZone;
-        private Dictionary<string, int> tasks;
+        private string recentTask = string.Empty;
+        private bool isInTaskZone = false;
+        private Dictionary<string, int> tasks = new();
         async void Task_DataStructures()
         {
             Debug.WriteLine("进入任务 数据结构");
+            mwvm!.TaskTipViewModel.TipText = "";
+            await mwvm!.TaskTipViewModel.HideTaskTipAsync();
             recentTask = "DataStructures";
             //赶紧把任务状态归掉
             maps[recentMapIndex].Value[5][12] = 0;
@@ -31,8 +37,8 @@ namespace Code_Ruins
             maps[recentMapIndex].Value[6][12] = 0;
             maps[recentMapIndex].Value[6][13] = 0;
 
-            //显示已移动到ChttingResource
-            mwvm.ChipCodeViewModel.ChipCodeDocument.Text = """
+            //显示已移动到ChattingResource
+            mwvm!.ChipCodeViewModel.ChipCodeDocument.Text = """
             using System;
             int port = 0;   //端口 端口0无电量 端口1输出900.7V电压 端口2输出1000V电压
             double voltage = 0;    //启动机器需要 【900.7V】电压
@@ -49,17 +55,19 @@ namespace Code_Ruins
 
             """;
 
-            mwvm.ChattingResource.RecentStage = "DataStructures";
-            mwvm.ChipCodeViewModel.StandardOutput = "电源端口:\r\n1\r\n电压控制(V):\r\n900.7\r\n启动状态:\r\nTrue\r\n目前任务:\r\nB\r\n";
-            mwvm.ChipCodeViewModel.PreInput = "";
-            ResetAndShowChattingBox();
-            
-            
+            mwvm!.ChattingResource.RecentStage = "DataStructures";
+            mwvm!.ChipCodeViewModel.StandardOutput = "电源端口:\r\n1\r\n电压控制(V):\r\n900.7\r\n启动状态:\r\nTrue\r\n目前任务:\r\nB\r\n";
+            mwvm!.ChipCodeViewModel.PreInput = "";
+            mwvm!.ChattingBox.ShowAndResetChattingBox();
+
+
         }
 
         async void Task_InputAndCalculate()
         {
             Debug.WriteLine("进入任务 计算与输入");
+            mwvm!.TaskTipViewModel.TipText = "";
+            await mwvm!.TaskTipViewModel.HideTaskTipAsync();
             recentTask = "InputAndCalculate";
             //赶紧把任务状态归掉
             maps[recentMapIndex].Value[5][12] = 0;
@@ -67,8 +75,8 @@ namespace Code_Ruins
             maps[recentMapIndex].Value[6][12] = 0;
             maps[recentMapIndex].Value[6][13] = 0;
 
-            //显示已移动到ChttingResource
-            mwvm.ChipCodeViewModel.ChipCodeDocument.Text = """
+            //显示已移动到ChattingResource
+            mwvm!.ChipCodeViewModel.ChipCodeDocument.Text = """
             using System;
             Console.Write("请输入身高:"); //使得机器输出不在末尾换行
             int height = (int)Console.ReadLine(); //读取输入
@@ -82,19 +90,19 @@ namespace Code_Ruins
             """;
             //从(height+weight+age)*10改成((height * 0.3 + weight * 0.5 + age * 0.6)*6.18)公式
             //从(int)改成int.Parse
-            mwvm.ChattingResource.RecentStage = "InputAndCalculateA";
-            mwvm.ChipCodeViewModel.StandardOutput = "请输入身高:请输入体重:请输入年龄:需要缴纳650金币税务\r\n";
-            mwvm.ChipCodeViewModel.PreInput = "170\n70\n32\n";
-            ResetAndShowChattingBox();
-            await Utils.WaitUntil(() => isOutingDone);
+            mwvm!.ChattingResource.RecentStage = "InputAndCalculateA";
+            mwvm!.ChipCodeViewModel.StandardOutput = "请输入身高:请输入体重:请输入年龄:需要缴纳650金币税务\r\n";
+            mwvm!.ChipCodeViewModel.PreInput = "170\n70\n32\n";
+            mwvm!.ChattingBox.ShowAndResetChattingBox();
+            await Utils.WaitUntil(() => mwvm!.ChattingBoxViewModel.IsOutingDone);
             IdeButton.IsVisible = true;
             await Task.Delay(2000);
-            mwvm.ChattingResource.RecentStage = "InputAndCalculateB";
-            ResetAndShowChattingBox();
-            await Utils.WaitUntil(() => isOutingDone);
+            mwvm!.ChattingResource.RecentStage = "InputAndCalculateB";
+            mwvm!.ChattingBox.ShowAndResetChattingBox();
+            await Utils.WaitUntil(() => mwvm!.ChattingBoxViewModel.IsOutingDone);
             WikiButton.IsVisible = true;
-            mwvm.ChattingResource.RecentStage = "InputAndCalculateC";
-            ResetAndShowChattingBox();
+            mwvm!.ChattingResource.RecentStage = "InputAndCalculateC";
+            mwvm!.ChattingBox.ShowAndResetChattingBox();
 
         }
 
@@ -102,16 +110,22 @@ namespace Code_Ruins
 
 
 
-        void SceneTwo()
+        async void SceneTwo()
         {
-            ChangeScene("Assets/Pictures/SceneTwoPlatform.png", "Assets/Pictures/Dummy.png", "InputAndCalculate", "ArriveAtSlum");
+            await Task.Delay(1000);
+            await mwvm!.ShowThenHideCurtainAsync(1000, () => { ChangeScene("Assets/Pictures/SceneTwoPlatform.png", "Assets/Pictures/Tents.png", "InputAndCalculate", "ArriveAtSlum"); });   
             Debug.WriteLine(recentMapIndex);
-            ResetAndShowChattingBox();
+            mwvm!.ChattingBox.ShowAndResetChattingBox();
+            await Utils.WaitUntil(() => mwvm!.ChattingBoxViewModel.IsOutingDone);
+            mwvm!.TaskTipViewModel.TipText = "任务 - 去看看那个【区长?】";
+            await mwvm!.TaskTipViewModel.ShowTaskTipAsync();
         }
 
-        void SceneThree()
+        async void SceneThree()
         {
-            MessageBox.ShowAsync("钓鱼，妈的!");
+            await Task.Delay(1000);
+            await mwvm!.ShowThenHideCurtainAsync(1000, () => { mwvm!.RecentPage = mwvm!.EndPage; });
+            
         }
 
 
@@ -120,27 +134,29 @@ namespace Code_Ruins
             if (e.PropertyName == nameof(mwvm.ChipCodeViewModel.IsCodeSuccessful))
             {
 
-                
-                if (recentTask == "DataStructures" && (mwvm.ChipCodeViewModel.IsCodeSuccessful ?? false))
+
+                if (recentTask == "DataStructures" && (mwvm!.ChipCodeViewModel.IsCodeSuccessful ?? false))
                 {
                     Debug.WriteLine("通过!");
                     TaskSuccess();
-                    mwvm.ChattingResource.RecentStage = "DataStructuresSuccess";
+                    mwvm!.ChattingResource.RecentStage = "DataStructuresSuccess";
                     ScenePlatform.Source = new Bitmap("Assets/Pictures/SceneOnePlatformSuccess.png");
-                    ResetAndShowChattingBox();
-                    mwvm.CodeEditor.WindowState = WindowState.Minimized;
-                    await Utils.WaitUntil(() => isOutingDone); 
+                    mwvm!.ShowThenHideSnackBar("成就 == Oh!你居然修好了吊塔");
+                    mwvm!.ChattingBox.ShowAndResetChattingBox();
+                    mwvm!.CodeEditor.WindowState = WindowState.Minimized;
+                    await Utils.WaitUntil(() => mwvm!.ChattingBoxViewModel.IsOutingDone);
                     Log.Information("到达场景2");
                     SceneTwo();
                 }
-                if (recentTask == "InputAndCalculate" && (mwvm.ChipCodeViewModel.IsCodeSuccessful ?? false))
+                if (recentTask == "InputAndCalculate" && (mwvm!.ChipCodeViewModel.IsCodeSuccessful ?? false))
                 {
                     Debug.WriteLine("通过!");
                     TaskSuccess();
-                    mwvm.ChattingResource.RecentStage = "InputAndCalculateSuccess";
-                    ResetAndShowChattingBox();
-                    mwvm.CodeEditor.WindowState = WindowState.Minimized;
-                    await Utils.WaitUntil(() => isOutingDone);
+                    mwvm!.ChattingResource.RecentStage = "InputAndCalculateSuccess";
+                    mwvm!.ShowThenHideSnackBar("成就 == 要去钓鱼咯~!");
+                    mwvm!.ChattingBox.ShowAndResetChattingBox();
+                    mwvm!.CodeEditor.WindowState = WindowState.Minimized;
+                    await Utils.WaitUntil(() => mwvm!.ChattingBoxViewModel.IsOutingDone);
                     Log.Information("到达场景3");
                     SceneThree();
                 }
@@ -150,21 +166,19 @@ namespace Code_Ruins
 
         void TaskSuccess()
         {
-            mwvm.ChipCodeViewModel.IsCodeSuccessful = false;
+            mwvm!.ChipCodeViewModel.IsCodeSuccessful = false;
             tasks[recentTask] = 1;
         }
 
 
 
-        void ChangeScene(string sceneBackgroundPath,string sceneBackgrondDecorationPath,string task,string stage)
+        void ChangeScene(string sceneBackgroundPath, string sceneBackgroundDecorationPath, string task, string stage)
         {
 
             ScenePlatform.Source = new Bitmap(sceneBackgroundPath);
-            ScenePlatformDecoration.Source = new Bitmap(sceneBackgrondDecorationPath);
-            mwvm.ChattingResource.RecentStage = stage;
-            Debug.WriteLine("before add"+recentMapIndex);
-            recentMapIndex = recentMapIndex + 1;
-            Debug.WriteLine("after add" + recentMapIndex);
+            ScenePlatformDecoration.Source = new Bitmap(sceneBackgroundDecorationPath);
+            mwvm!.ChattingResource.RecentStage = stage;
+            recentMapIndex++;
             recentTask = task;
             tileX = 0;
             tileY = 0;
@@ -182,7 +196,7 @@ namespace Code_Ruins
                 ["DataStructures"] = 0,
                 ["InputAndCalculate"] = 0,
             };
-            mwvm.ChipCodeViewModel.PropertyChanged += ChipCodeViewModel_PropertyChanged;
+            mwvm!.ChipCodeViewModel.PropertyChanged += ChipCodeViewModel_PropertyChanged;
         }
     }
 }

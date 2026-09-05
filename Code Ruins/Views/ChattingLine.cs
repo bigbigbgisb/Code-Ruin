@@ -1,45 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Numerics;
 using System.Text;
 
 namespace Code_Ruins.Views
 {
     public class ChattingLine
     {
-        private Dictionary<int, string> nameDict = new()
+        private readonly Dictionary<int, string> nameDict = new()
         {
             [1] = "赛佛",
             [2] = "希伦·格雷",
             [3] = "区长 提米",
         };
-        private string _finalMessage;
-        private Action _function;
-        public string Message { get { return _finalMessage; } }
-        public Action Function { get { return _function; } }
-        private void Dummy()
+        public string Message { get; }
+        public Action Function { get; }
+        public ChattingLine(string message, Action? function, object name)
         {
-
-        }
-        public ChattingLine(string message,Action? function, object name)
-        {
-            _function = function ?? Dummy;
-
-            if (name.GetType() == typeof(int))
+            Function = function ?? (() => { });
+            if (name is int index)
             {
-                try
-                {
-                    _finalMessage = nameDict[(int)name] + "\n" + message;
-                }
-                catch
-                {
-                    throw new KeyNotFoundException();
-                }
-                
+                Message = nameDict.GetValueOrDefault(index, "Cannot Find Resource") + "\n" + message;
             }
-            else if (name.GetType() == typeof(string))
+            else if (name is string personName)
             {
-                _finalMessage = (string)name + "\n" + message;
+                Message = personName + "\n" + message;
             }
             else
             {

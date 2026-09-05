@@ -13,17 +13,11 @@ namespace Code_Ruins.Views
 
         private void ShowWikiDetail(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            if ((sender as Button) == null)
+            if (sender is not Button _ || (sender as Button)?.Tag is not int id)
             {
                 return;
             }
-            if ((sender as Button)?.Tag == null)
-            {
-                return;
-            }
-            var wikiContentPage = new CodeWiki_WikiContentPage((int)(sender as Button)?.Tag);
-            wikiContentPage.DataContext = this.DataContext;
-            OverridePage.Content = wikiContentPage;
+            OverridePage.Content = new CodeWiki_WikiContentPage(id) { DataContext = DataContext };
         }
     }
 }

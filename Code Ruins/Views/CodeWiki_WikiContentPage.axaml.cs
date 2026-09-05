@@ -1,14 +1,17 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Primitives;
 using Avalonia.Markup.Xaml;
+
 using Code_Ruins.ViewModels;
+
 using System.Linq;
 
 namespace Code_Ruins.Views
 {
     public partial class CodeWiki_WikiContentPage : UserControl
     {
-        private int _id;
+        private readonly int _id;
         public CodeWiki_WikiContentPage(int id)
         {
             InitializeComponent();
@@ -18,7 +21,7 @@ namespace Code_Ruins.Views
 
         private void CodeWiki_WikiContentPage_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            var wikiContent = (DataContext as MainWindowViewModel).WikiContentResource.WikiContentsResource.FirstOrDefault(x => x.Id == _id);
+            var wikiContent = (DataContext as MainWindowViewModel)!.WikiContentResource.WikiContentsResource.FirstOrDefault(x => x.Id == _id);
             if (wikiContent != null)
             {
                 Title.Text = wikiContent.Title;
@@ -30,10 +33,7 @@ namespace Code_Ruins.Views
         private void Back_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             var parent = this.Parent as ContentControl;
-            if (parent != null)
-            {
-                parent.Content = null;
-            }
+            parent?.Content = null;
         }
     }
 }

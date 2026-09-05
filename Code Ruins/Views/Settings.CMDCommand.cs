@@ -1,20 +1,25 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
+
 using Code_Ruins.ViewModels;
+
 using MsBox.Avalonia;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Text.RegularExpressions;
+
 using Ursa.Controls;
+
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Code_Ruins.Views
 {
     public partial class Settings
     {
-        private Dictionary<string, Dictionary<string, CmdCommandInfomation>> commandReturns;
+        private readonly Dictionary<string, Dictionary<string, CmdCommandInformation>> commandReturns;
 
         void RunCommand(string text)
         {
@@ -23,30 +28,31 @@ namespace Code_Ruins.Views
             string[] commandAndArgs = text.Trim().ToUpper().Split(" ");
             foreach (var keyAndValue in commandReturns)
             {
-                
+
                 if (commandAndArgs[0] == keyAndValue.Key)
                 {
 
                     if (keyAndValue.Key == text.Replace(" ", "").ToUpper())
                     {
-                        CommandHistory.Text += keyAndValue.Value[""].ReturnValue + "\n";
                         keyAndValue.Value[""].Action(commandAndArgs[1..]);
+                        CommandHistory.Text += keyAndValue.Value[""].ReturnValue + "\n";
                         isFind = true;
                         break;
                     }
 
-                    if (keyAndValue.Value.TryGetValue(commandAndArgs[1], out var cmdCommandInfomation))
+                    if (keyAndValue.Value.TryGetValue(commandAndArgs[1], out var cmdCommandInformation))
                     {
                         //对于参数有键的命令，如HELP XXX
-                        CommandHistory.Text += keyAndValue.Value[commandAndArgs[1]].ReturnValue + "\n";
                         keyAndValue.Value[commandAndArgs[1]].Action(commandAndArgs[1..]);
+                        CommandHistory.Text += keyAndValue.Value[commandAndArgs[1]].ReturnValue + "\n";
+                        
                     }
                     else
                     {
-                        Debug.WriteLine(13);
                         //对于自由参数的命令，如CHATTINGSPEED XXX
-                        CommandHistory.Text += keyAndValue.Value[""].ReturnValue + "\n";
                         keyAndValue.Value[""].Action(commandAndArgs[1..]);
+                        CommandHistory.Text += keyAndValue.Value[""].ReturnValue + "\n";
+                        
                     }
 
 
@@ -66,7 +72,7 @@ namespace Code_Ruins.Views
 
 
         void ChangeChattingSpeed(string[] args)
-        
+
         {
             if (args.Length < 1)
             {
@@ -74,12 +80,12 @@ namespace Code_Ruins.Views
             }
             if (int.TryParse(args[0], out int speed))
             {
-                if(speed > 400 || speed < 50)
+                if (speed >= 400 || speed < 50)
                 {
-                    CommandHistory.Text += "速度过大 请修改参数为 50<speed<=400 的形式\n";
+                    CommandHistory.Text += "速度过大 请修改参数为 50 < speed <= 400 的形式\n";
                     return;
                 }
-                mwvm.BaseSettingsViewModel.TypingSpeed = speed;
+                mwvm!.BaseSettingsViewModel.TypingSpeed = speed;
                 CommandHistory.Text += $"修改成功; TypingSpeed == {speed} return True\n";
 
 
@@ -97,45 +103,42 @@ namespace Code_Ruins.Views
             {
                 if (speed > 4 || speed < 1)
                 {
-                    CommandHistory.Text += "速度过大 请修改参数为 0<speed<=4 的形式\n";
+                    CommandHistory.Text += "速度过大 请修改参数为 0 < speed <= 4 的形式\n";
                     return;
                 }
-                mwvm.BaseSettingsViewModel.PlayerSpeed = speed;
+                mwvm!.BaseSettingsViewModel.PlayerSpeed = speed;
                 CommandHistory.Text += $"修改成功; PlayerSpeed == {speed} return True\n";
 
 
             }
         }
 
-        async void ReturnHomePageAndClear(string[] args)
+        async void ReturnHomePageAndClear(string[] _)
         {
 
             CommandHistory.Text = string.Empty;
-            await MessageBoxManager.GetMessageBoxStandard("Confirm", "是否确认退出控制台?").ShowWindowDialogAsync((App.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow);
+            if ((App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow is not MainWindow mainWindow) { return; }
+            await MessageBoxManager.GetMessageBoxStandard("Confirm", "是否确认退出控制台?").ShowWindowDialogAsync(mainWindow);
             var parent = this.Parent as ContentControl;
-            if (parent != null)
-            {
-                parent.Content = null;
-            }
+            parent?.Content = null;
+
         }
-        async void ReturnHomePage(string[] args)
+        async void ReturnHomePage(string[] _)
         {
+            if ((App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow is not MainWindow mainWindow) { return; }
+            await MessageBoxManager.GetMessageBoxStandard("Confirm", "是否确认退出控制台?").ShowWindowDialogAsync(mainWindow);
             var parent = this.Parent as ContentControl;
-            await MessageBoxManager.GetMessageBoxStandard("Confirm", "是否确认退出控制台?").ShowWindowDialogAsync((App.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow);
-            if (parent != null)
-            {
-                parent.Content = null;
-            }
+            parent?.Content = null;
         }
 
-        void ShowFPS(string[] args)
+        void ShowFPS(string[] _)
         {
-            mwvm.IsFpsVisible = true;
+            mwvm!.IsFpsVisible = true;
         }
 
-        void HideFPS(string[] args)
+        void HideFPS(string[] _)
         {
-            mwvm.IsFpsVisible = false;
+            mwvm!.IsFpsVisible = false;
         }
 
     }

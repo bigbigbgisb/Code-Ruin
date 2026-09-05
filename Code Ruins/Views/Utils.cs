@@ -1,4 +1,5 @@
 ﻿using Microsoft.CodeAnalysis.CSharp;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,16 +11,12 @@ namespace Code_Ruins.Views
     {
         public async static Task WaitUntil(Func<bool> condition)
         {
-            while (true)
+            int timeMs = 0;
+            while (!condition())
             {
-                if (condition())
-                {
-                    break;
-                }
-                else
-                {
-                    await Task.Delay(16);
-                }
+                if (timeMs > 36000000) throw new TimeoutException("WaitUntil waits for 10 minutes but condition is still not true");
+                await Task.Delay(16);
+                timeMs += 16;
             }
         }
     }

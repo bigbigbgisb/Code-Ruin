@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,11 +15,11 @@ namespace Code_Ruins.Views
         [ObservableProperty]
         string _darkBorderColor = "#373737";
         [ObservableProperty]
-        string _OrangeFillColor = "#F79B1F";
+        string _orangeFillColor = "#F79B1F";
         [ObservableProperty]
-        string _DarklightFillColor = "#B5B5B5";
+        string _darklightFillColor = "#B5B5B5";
         [ObservableProperty]
-        string _MidlightFillColor = "#D2D2D2";
+        string _midlightFillColor = "#D2D2D2";
         [ObservableProperty]
         string _lightFillColor = "#FFFFFF";
         [ObservableProperty]

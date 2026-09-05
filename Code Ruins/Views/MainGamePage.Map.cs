@@ -6,8 +6,8 @@ namespace Code_Ruins
 {
     public partial class MainGamePage
     {
-        private List<KeyValuePair<string, int[][]>> maps;
-        private int recentMapIndex;
+        private List<KeyValuePair<string, int[][]>> maps = new();
+        private int recentMapIndex = 0;
 
         void MapInit()
         {

@@ -19,14 +19,8 @@
             </Grid.RowDefinitions>
         <TextBlock x:Name="FpsShower" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" IsVisible="{Binding IsFpsVisible}" ZIndex="999999999"></TextBlock>
         <Image x:Name="Picture" ZIndex="9998" Grid.Row="0" Grid.RowSpan="2" Source="{Binding ChattingResource.RecentImage}"  Margin="100"></Image>
-        <Border ZIndex="9999" Grid.Row="1" x:Name="ChattingBox" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderThickness="3" BorderBrush="{Binding ThemeViewModel.LightFillColor}" PointerPressed="ChattingBox_PointerPressed" Margin="10,10,10,10" >
-            <Grid>
-                 <TextBlock FontSize="20" FontFamily="/Assets/#Zpix"  x:Name="ChattingTextBlock" Text="" Foreground="{Binding ThemeViewModel.NeonGreen}" Margin="30,30,30,30"></TextBlock>
-                 <TextBlock FontSize="20" FontFamily="/Assets/#Zpix" Text="▼" Foreground="{Binding ThemeViewModel.NeonGreen}" Margin="20,20,20,20" HorizontalAlignment="Right" VerticalAlignment="Bottom"></TextBlock>
-            </Grid>
-         
-       </Border>
-        <Border x:Name="Curtain" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Bottom" Background="{Binding ThemeViewModel.Black}" HorizontalAlignment="Stretch" Height="0" ZIndex="1000000000"></Border>
+ 
+        
         <Grid x:Name="SceneOne" Grid.Row="0" PointerMoved="SceneOne_PointerMoved">
             
             <Grid Grid.Row="0">

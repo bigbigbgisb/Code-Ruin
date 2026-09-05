@@ -39,7 +39,7 @@
                     <Button Margin="10,0,0,0" Content="About" FontFamily="/Assets/#Zpix"  FontSize="10" Height="15" Width="100" Background="{Binding ThemeViewModel.LightFillColor}" Foreground="{Binding ThemeViewModel.Black}"></Button>
                 </StackPanel>
                 <Image Height="20" RenderOptions.BitmapInterpolationMode="None"  Grid.Column="1"  Source="/Assets/Pictures/Search.png" HorizontalAlignment="Right"></Image>
-                <TextBox FontFamily="/Assets/#Zpix" Grid.Column="2" HorizontalAlignment="Stretch"  Margin="0,0,40,0" x:Name="SearchBar" Background="{Binding ThemeViewModel.LightFillColor}" BorderThickness="2" BorderBrush="{Binding ThemeViewModel.OrangeFillColor}" KeyDown="SerachBar_KeyDown"  ></TextBox>
+                <TextBox PlaceholderText="Please Enter What You Want To Ask" FontFamily="/Assets/#Zpix" Grid.Column="2" HorizontalAlignment="Stretch"  Margin="0,0,40,0" x:Name="SearchBar" Background="{Binding ThemeViewModel.LightFillColor}" BorderThickness="2" BorderBrush="{Binding ThemeViewModel.OrangeFillColor}" KeyDown="SearchBar_KeyDown"  ></TextBox>
                 <Button x:Name="Mini" Click="Mini_Click" Grid.Column="3"  Background="{Binding ThemeViewModel.LightFillColor}" Content="-" Padding="0" Foreground="{Binding ThemeViewModel.Black}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ></Button>
                 
             </Grid>

@@ -1,6 +1,8 @@
 ﻿using Avalonia.Media;
 using Avalonia.Media.Imaging;
+
 using Code_Ruins.Views;
+
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -19,22 +21,22 @@ namespace Code_Ruins
         private bool isDown;
         private bool isLeft;
         private bool isRight;
-        private Dictionary<string, string> characterStandingImage;
-        private Dictionary<string,Bitmap> cacheCharacterStandingImage;
+        private Dictionary<string, string> characterStandingImage = new();
+        private Dictionary<string, Bitmap> cacheCharacterStandingImage = new();
         private int leftIndex;
         private int upIndex;
         private int rightIndex;
         private int downIndex;
-        private List<string> characterWalkingImage;
-        private List<Bitmap> cacheCharacterWalkingImage;
+        private List<string> characterWalkingImage = new();
+        private List<Bitmap> cacheCharacterWalkingImage = new();
         private long lastTime = DateTime.Now.Ticks;
         private int fpsCount = 0;
-        private double fpsSum = 0;  
+        private double fpsSum = 0;
 
-        private string lastDirection;
+        private string lastDirection = string.Empty;
         void PlayerAnimation()
         {
-            
+
             if (isUp)
             {
                 if (upIndex >= 5)
@@ -86,8 +88,8 @@ namespace Code_Ruins
             CalculateFps();
             if (isUp)
             {
-                int nextOffsetY = offsetY + mwvm.BaseSettingsViewModel.PlayerSpeed;
-                int nextTileY = (int)Math.Floor((double)(5 + -nextOffsetY / 32 / 2));
+                int nextOffsetY = offsetY + mwvm!.BaseSettingsViewModel.PlayerSpeed;
+                int nextTileY = (int)Math.Floor((double)(5 + (-(nextOffsetY) / 32 / 2)));
                 try
                 {
                     if (maps[recentMapIndex].Value[nextTileY][tileX] == 1)
@@ -96,12 +98,12 @@ namespace Code_Ruins
                     }
                     else
                     {
-                        offsetY += mwvm.BaseSettingsViewModel.PlayerSpeed;
+                        offsetY += mwvm!.BaseSettingsViewModel.PlayerSpeed;
                     }
                 }
                 catch
                 {
-                    //Out of map index
+
                 }
 
 
@@ -109,8 +111,8 @@ namespace Code_Ruins
             }
             if (isDown)
             {
-                int nextOffsetY = offsetY - mwvm.BaseSettingsViewModel.PlayerSpeed;
-                int nextTileY = (int)Math.Floor((double)(5 + -nextOffsetY / 32 / 2));
+                int nextOffsetY = offsetY - mwvm!.BaseSettingsViewModel.PlayerSpeed;
+                int nextTileY = (int)Math.Floor((double)(5 + (-(nextOffsetY) / 32 / 2)));
                 try
                 {
                     if (maps[recentMapIndex].Value[nextTileY][tileX] == 1)
@@ -119,7 +121,7 @@ namespace Code_Ruins
                     }
                     else
                     {
-                        offsetY -= mwvm.BaseSettingsViewModel.PlayerSpeed;
+                        offsetY -= mwvm!.BaseSettingsViewModel.PlayerSpeed;
                     }
                 }
 
@@ -132,7 +134,7 @@ namespace Code_Ruins
             }
             if (isLeft)
             {
-                int nextOffsetX = offsetX + mwvm.BaseSettingsViewModel.PlayerSpeed;
+                int nextOffsetX = offsetX + mwvm!.BaseSettingsViewModel.PlayerSpeed;
                 int nextTileX = (int)Math.Floor((double)(-nextOffsetX / 32 / 2));
                 try
                 {
@@ -142,7 +144,7 @@ namespace Code_Ruins
                     }
                     else
                     {
-                        offsetX += mwvm.BaseSettingsViewModel.PlayerSpeed;
+                        offsetX += mwvm!.BaseSettingsViewModel.PlayerSpeed;
                     }
                 }
                 catch
@@ -153,7 +155,7 @@ namespace Code_Ruins
             }
             if (isRight)
             {
-                int nextOffsetX = offsetX - mwvm.BaseSettingsViewModel.PlayerSpeed;
+                int nextOffsetX = offsetX - mwvm!.BaseSettingsViewModel.PlayerSpeed;
                 int nextTileX = (int)Math.Floor((double)(-nextOffsetX / 32 / 2));
                 try
                 {
@@ -163,7 +165,7 @@ namespace Code_Ruins
                     }
                     else
                     {
-                        offsetX -= mwvm.BaseSettingsViewModel.PlayerSpeed;
+                        offsetX -= mwvm!.BaseSettingsViewModel.PlayerSpeed;
                     }
                 }
                 catch
@@ -172,7 +174,7 @@ namespace Code_Ruins
                 }
 
             }
-            
+
         }
         void UpdateMapTranslation()
         {
@@ -196,7 +198,7 @@ namespace Code_Ruins
                 fpsSum += deltaTime;
                 fpsCount++;
             }
-            
+
             lastTime = thisTime;
         }
         void MovementInit()
@@ -212,9 +214,9 @@ namespace Code_Ruins
                 ["Right"] = "Assets/ManAction/RMan2.png",
                 ["Down"] = "Assets/ManAction/DMan2.png"
             };
-            leftIndex = 0;  upIndex = 3; rightIndex = 6; downIndex = 9;
+            leftIndex = 0; upIndex = 3; rightIndex = 6; downIndex = 9;
             characterWalkingImage = new() { "Assets/ManAction/LMan1.png", "Assets/ManAction/LMan2.png", "Assets/ManAction/LMan3.png", "Assets/ManAction/UMan1.png", "Assets/ManAction/UMan2.png", "Assets/ManAction/UMan3.png", "Assets/ManAction/RMan1.png", "Assets/ManAction/RMan2.png", "Assets/ManAction/RMan3.png", "Assets/ManAction/DMan1.png", "Assets/ManAction/Dman2.png", "Assets/ManAction/DMan3.png" };
-            foreach(string path in characterWalkingImage)
+            foreach (string path in characterWalkingImage)
             {
                 cacheCharacterWalkingImage.Add(new Bitmap(path));
             }

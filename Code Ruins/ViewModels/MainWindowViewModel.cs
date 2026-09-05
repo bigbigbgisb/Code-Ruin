@@ -1,6 +1,14 @@
-﻿using Avalonia.Controls.Platform;
+﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+
+using Avalonia.Controls.Platform;
+using Avalonia.Platform;
+
 using Code_Ruins.Views;
+
 using CommunityToolkit.Mvvm.ComponentModel;
+
 using CSScriptLib;
 
 namespace Code_Ruins.ViewModels
@@ -9,8 +17,29 @@ namespace Code_Ruins.ViewModels
     {
         public ChattingResource ChattingResource { get; } = new();
 
+
         [ObservableProperty]
+        int? _screenHeight = null;
+
+        [ObservableProperty]
+        int _curtainHeight = 0;
+
+        [ObservableProperty]
+        bool _curtainIsVisible = false;
+
+        [ObservableProperty]
+
         ThemeViewModel _themeViewModel = new();
+
+        [ObservableProperty]
+        ChattingBoxViewModel _chattingBoxViewModel = new();
+
+        [ObservableProperty]
+        ChattingBox _chattingBox = new();
+
+        [ObservableProperty]
+        TaskTipViewModel _taskTipViewModel = new();
+
 
         [ObservableProperty]
         bool _isFpsVisible = true;
@@ -49,31 +78,37 @@ namespace Code_Ruins.ViewModels
         CodeWiki _codeWiki = new();
 
         [ObservableProperty]
+        EndPage _endPage = new();
+
+        [ObservableProperty]
         BaseSettingsViewModel _baseSettingsViewModel = new();
 
         [ObservableProperty]
         IntroducePage introducePage = new();
 
-        
+
 
 
         public MainWindowViewModel()
         {
             StartPage.DataContext = this;
+            EndPage.DataContext = this;
             CodeWiki.DataContext = this;
             CodeWiki_QuestionsPage.DataContext = this;
             CodeWiki_HomePage.DataContext = this;
             IntroducePage.DataContext = this;
             MainGamePage.DataContext = this;
             CodeEditor.DataContext = this;
+            ChattingBox.DataContext = this;
             RecentPage = StartPage;
             CodeEditor.Topmost = true;
             CodeWiki.Topmost = true;
 
 
+
         }
 
-        
+
         public void ShowCodeEditor()
         {
             CodeEditor.DataContext = this;
@@ -98,7 +133,54 @@ namespace Code_Ruins.ViewModels
         {
             CodeWiki.WindowState = Avalonia.Controls.WindowState.Minimized;
         }
+
+        public async Task ShowCurtainAsync()
+        {
+            if (ScreenHeight is null) { return; }
+            
+
+            CurtainIsVisible = true;
+            while (!(CurtainHeight > ScreenHeight))
+            {
+                CurtainHeight += 30;
+                await Task.Delay(16);
+            }
+
+        }
+
+        public async Task HideCurtainAsync()
+        {
+            if (!CurtainIsVisible) { return; }
+            if (ScreenHeight is null) { return; }
+
+            while (CurtainHeight >= 30)
+            {
+                CurtainHeight -= 30;
+                await Task.Delay(16);
+            }
+            CurtainHeight = 0;
+            CurtainIsVisible = false;
+
+        }
+
+        public async Task ShowThenHideCurtainAsync(int interval, Action? action = null)
+        {
+            await ShowCurtainAsync();
+            if (action is not null) action();
+            await Task.Delay(interval);
+            await HideCurtainAsync();
+        }
+
+        public async void ShowThenHideSnackBar(string message)
+        {//显示成就
+            SnackBarViewModel.RecentAchievement = message;
+            SnackBarViewModel.ShowSnackBarCommand.Execute(null);
+            //隐藏成就
+            await Task.Delay(4000);
+            SnackBarViewModel.HideSnackBarCommand.Execute(null);
+            SnackBarViewModel.RecentAchievement = "";
+        }
     }
-    
-    
+
+
 }

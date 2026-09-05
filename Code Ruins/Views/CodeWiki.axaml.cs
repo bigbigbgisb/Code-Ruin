@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Markup.Xaml;
+
 using Code_Ruins.ViewModels;
 
 namespace Code_Ruins.Views
@@ -18,7 +19,7 @@ namespace Code_Ruins.Views
 
         private void CodeWiki_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            RecentPageContentControl.Content = (DataContext as MainWindowViewModel).CodeWiki_HomePage;
+            RecentPageContentControl.Content = (DataContext as MainWindowViewModel)!.CodeWiki_HomePage;
         }
 
         private void TitleBar_PointerPressed(object? sender, Avalonia.Input.PointerPressedEventArgs e)
@@ -26,14 +27,23 @@ namespace Code_Ruins.Views
             this.BeginMoveDrag(e);
         }
 
-        private void SerachBar_KeyDown(object? sender, Avalonia.Input.KeyEventArgs e)
+        private void SearchBar_KeyDown(object? sender, Avalonia.Input.KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
+
+            if (SearchBar?.Text?.Trim().Length == 0)
             {
-                Search(SearchBar.Text);
-                RecentPageContentControl.Content = (DataContext as MainWindowViewModel).CodeWiki_QuestionsPage;
+                (DataContext as MainWindowViewModel)!.WikiContentResource.WikiContentsResource = (DataContext as MainWindowViewModel)!.WikiContentResource.AllWikiContent;
             }
+            else
+            {
+                Search(SearchBar?.Text);
+                RecentPageContentControl.Content = (DataContext as MainWindowViewModel)!.CodeWiki_QuestionsPage;
+            }
+
+
         }
+
+
 
         private void Mini_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
@@ -42,24 +52,23 @@ namespace Code_Ruins.Views
 
         private void Home_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            RecentPageContentControl.Content = (DataContext as MainWindowViewModel).CodeWiki_HomePage;
+            RecentPageContentControl.Content = (DataContext as MainWindowViewModel)!.CodeWiki_HomePage;
         }
 
         private void Questions_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            
-            RecentPageContentControl.Content = (DataContext as MainWindowViewModel).CodeWiki_QuestionsPage;
-
+            RecentPageContentControl.Content = (DataContext as MainWindowViewModel)!.CodeWiki_QuestionsPage;
+            (DataContext as MainWindowViewModel)!.WikiContentResource.WikiContentsResource = (DataContext as MainWindowViewModel)!.WikiContentResource.AllWikiContent;
         }
 
         private void Tags_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            
+
         }
 
         private void Users_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            
+
         }
     }
 }

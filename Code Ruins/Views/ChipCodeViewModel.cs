@@ -1,5 +1,7 @@
 ﻿using AvaloniaEdit.Document;
+
 using CommunityToolkit.Mvvm.ComponentModel;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,7 +26,7 @@ namespace Code_Ruins.Views
         [ObservableProperty]
         private string preInput = "";
 
-        
+
     }
 
 

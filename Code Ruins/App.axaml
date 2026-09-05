@@ -11,5 +11,620 @@
         <u-semi:SemiTheme Locale="zh-CN"></u-semi:SemiTheme>
         <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml" />
     </Application.Styles>
+    <!-- It's over. -->
+    <!--    Over    -->
+    <!-- KhalilFong -->
+    <!-- 2011/4/21/ -->
+    <!-- 
+        謊言是毒液 有心無意 雨季般的哭泣
+        真情不易 一敗塗地 這場愛沒了伏筆
+        他不值得妳 為他可惜 到了結局的戲
+        傻傻的妳痛得徹底 其實我捨不得妳
+        Why? Oh, why? 又受傷害 (oh-oh)
+        Oh, tell me why? Oh, why?
+        又被回憶收買 忘不掉的舊愛 走不開
+        It's over 心碎瞭然後呢?
+        妳為他消瘦了 也換不回甚麼了
+        愛走了 it's over 心碎瞭然後呢?
+        結束了悶夠了 是否該放手了?
+        灰的壞的苦的恨的都過去了 陽光出來了
+        他懷著歉意 埋葬甜蜜 短暫的壞天氣
+        或許天意斷了聯繫 請妳練習愛自己
+        他不夠珍惜 不懂疼你 不需要再生氣
+        傷心的妳就到這裡 最後一次的分離
+        Why? Oh, why? 又受傷害 (oh-oh)
+        Oh, tell me why? (Oh, why?) Oh, why? (Oh, why?)
+        又被回憶收買 忘不掉的舊愛 走不開
+        It's over 心碎瞭然後呢?
+        妳為他消瘦了 也換不回甚麼了
+        愛走了 it's over 心碎瞭然後呢?
+        結束了悶夠了 是否該放手了?
+        灰的壞的苦的恨的都過去了 陽光出來了
+        It's over 心碎瞭然後呢?
+        妳為他消瘦了 也換不回甚麼了
+        愛走了 it's over 心碎瞭然後呢?
+        結束了悶夠了 是否該放手了?
+        灰的壞的苦的恨的都過去了
+        陽光出來了 而悲傷再見了
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's over
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's over
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's over
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's over
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's over
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's over
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's-
+        Girl, you know it's over
+        作曲：Wei Kai Cui, Da Tong Fang。仅限非商业用途。
+    -->
+    <!-- 偷笑 --> 
+    <!--    Tou Xiao    -->
+    <!-- KhalilFong --> 
+    <!-- 2006/12/29/ --> <!--
+    你的眉毛说了什么
+    也许没有什么我怎么了
+    你的姿态多么难猜
+    有趣又有可爱也有点奇怪
+
+    你的手里只有一杯水
+    从没听过一杯水会令人醉
+    不知应不应该叫你一个大孩子
+    人左你右刁蛮不爱听话
+
+    会不会是不是我太闲
+    这意外你忽然会偷偷笑开
+    笑的解释字典里记载
+    那好像是一种甜蜜的表白
+    就说我太多心不对
+    是你真有点神秘
+
+    你的耳朵听到什么
+    脑袋里想什么你怎么了
+    你的双手捏着衣袖
+    道出你的温柔值得研究
+
+    两个人还不懂的科学
+    像刚开课会念的第一节
+    错对没答案的问题
+    现在让我再来做个推敲
+
+    会不会是不是我太闲
+    这意外你忽然会偷偷笑开
+    笑的解释字典里记载
+    那好像是一种甜蜜的表白
+    就说我太多心不对
+    是你真有点神秘
+
+    不对了怎么会那么在意了
+    再没有看到你笑了
+    是否再不想为谁来回味
+    不是为我费心实在可惜
+
+    会不会是不是我太闲
+    这意外你忽然会偷偷笑开
+    笑的解释字典里记载
+    那好像是一种甜蜜的表白
+    就说我太多心不对
+    是你真有点神秘
+
+    会不会是不是我太闲
+    这意外你忽然会偷偷笑开
+    笑的解释字典里记载
+    那好像是一种甜蜜的表白
+    就说我太多心不对
+    是你真有点神秘
+    -->
+    <!--词：Da Tong Fang 作曲：Da Tong Fang。仅限非商业用途。 -->
+
+    <!-- 妹妹 --> 
+    <!--    Mei Mei    --> 
+    <!-- KhalilFong --> 
+    <!-- 2005/11/18/ --> <!--
+    如果要从头讲
+    我想应该是八七年
+    让我想起小时候的时候的事情
+    有很多话好说
+    有好多值得说
+    但这一首是特别写给我的表妹
+
+    当年她大概一岁我才五岁
+    还不知道她是谁
+    妈妈说那是你的表妹我说ok
+
+    你是我的妹妹
+    多可爱的妹妹
+    你有很高的地位
+    多美丽的妹妹
+    你永远会是宝贝
+
+    我们在一起的时候真的很快乐
+    我一直最拿手的就是逗她笑笑
+    就算是多云天
+    就算是暴雨天
+    如果有她陪着我就好像变了晴天
+
+    眨眼已过了几年
+    我们隔几年见一面
+    真想不到侬今年有十七岁长大了
+
+    你以后有困难
+    可以来找我谈谈
+    说说点心里话
+    说出来没那么烦
+    你可以相信我
+    只想你好好过
+    我只希望你知道
+    -->
+    <!--词：Da Tong Fang 作曲：Da Tong Fang。仅限非商业用途。 -->
+
+    <!-- 诗人的情人 --> 
+    <!--    Shi Ren De Qing Ren    --> 
+    <!-- KhalilFong --> 
+    <!-- 2006/12/29/ --> 
+    <!--
+    缠绵是首诗 很容易迷失
+    北岛的朦胧不减李商隐的精致
+    感情是首诗 要懂爱才能知
+    我希望像李宗盛一针挑中你心事
+    别像宋代李清照凄凄惨惨戚戚
+
+    我愿为你背诵 每一首情诗
+    我愿意做你的老师
+    示范着执子之手如何解释
+    不愿为深奥的感情 变白痴
+    我俩的情事 是一首情诗
+    要像徐志摩那么痴
+    要像对押韵的坚持
+    要成为文学的历史
+    让我们要多美丽有多美丽
+
+    很少人看诗 很少人得知
+    拥抱时怎创作接近诗意的手势
+    很少人懂诗 很少人情痴
+    莎士比亚的十四行诗快没人认识
+    可我对你吟颂并不如烟的往事
+
+    我愿为你背诵 每一首情诗
+    我愿意做你的老师
+    示范着执子之手如何解释
+    不愿为深奥的感情 变白痴
+    我俩的情事 是一首情诗
+    要像徐志摩那么痴
+    要像对押韵的坚持
+    要成为文学的历史
+    要这段情感动他人名噪一时
+    让这一首解构拥抱的诗
+    感染这误解爱情的城市
+    多少艰涩的美感快消失
+    可我们是少数的奢侈
+    我送你情诗就靠着灵犀一指
+    走遍世界也能步步成诗 给写成故事
+
+    我愿为你背诵 每一首情诗
+    我愿意做你的老师
+    示范着执子之手如何解释
+    不愿为深奥的感情 变白痴
+    我俩的情事 是一首情诗
+    要像徐志摩那么痴
+    要像对押韵的坚持
+    要成为文学的历史
+    让我们要多美丽有多美丽
+    -->
+    <!--词：Xi Lin 作曲：Da Tong Fang。仅限非商业用途。 -->
+
+
+    <!-- Ring Finger --> 
+    <!--    Ring Finger    --> 
+    <!-- KhalilFong --> 
+    <!-- 2016/09/28/ --> <!--
+    她一现身就像海啸
+    无辜表情眼睛在笑
+    愿为她把灵魂出卖掉 (无法说不要)
+    她是女神是女主角
+    三千佳丽只是塑胶
+    理智断线急救无效
+
+    只是谈谈心 (又没关系)
+    动一点凡心 (也没关系)
+    二意又三心 (我没关系)
+    是否该担心 (复杂的关系)
+    旋转或靠近 (全部都可以)
+    掏肺或掏心 (一切都合理)
+    桃花或好运 (要为你做什么我都乐意)
+
+    That girl is a danger zone
+    Everybody in the corner wanna say hello
+    And if she comin' to you strong like "take me home"
+    Are gonna let her just linger
+    She said why you takin' so long
+    Just meet me outside at the end of this song
+    She said she ain't right or wrong
+    But don't forget the ring on your finger
+
+    Ring finger I think I gotta go back I gotta go back I gotta go
+    Ring finger I think I gotta go back I gotta go back I gotta go
+    Ring finger I think I gotta go back I gotta go back I gotta go
+    Ring finger I think I gotta go back I gotta go back I gotta go
+
+    Oh oh oh oh 不想逃也逃不了
+    Oh oh oh oh 电话正在呼叫
+    Oh oh oh oh 老婆正在苦笑
+    暧昧正在发酵
+
+    只是谈谈心 (又没关系)
+    动一点凡心 (也没关系)
+    二意又三心 (我没关系)
+    是否该担心 (复杂的关系)
+    旋转或靠近 (全部都可以)
+    掏肺或掏心 (一切都合理)
+    桃花或好运 (要为你做什么我都乐意)
+
+    That girl is a danger zone
+    Everybody in the corner wanna say hello
+    And if she comin' to you strong like "take me home"
+    Are gonna let her just linger
+    She said why you takin' so long
+    Just meet me outside at the end of this song
+    She said she ain't right or wrong
+    But don't forget the ring on your finger
+
+    Ring finger I think I gotta go back I gotta go back I gotta go
+    Ring finger I think I gotta go back I gotta go back I gotta go
+    Ring finger I think I gotta go back I gotta go back I gotta go
+    Ring finger I think I gotta go back I gotta go back I gotta go
+    -->
+    <!--词：Da Tong Fang 作曲：Da Tong Fang,Derrick Sepnio。仅限非商业用途。 -->
+
+    <!-- 悟空 --> 
+    <!--    Wu Kong    --> 
+    <!-- KhalilFong --> 
+    <!-- 2016/09/28/ --> 
+    <!--
+    我是谁
+    记得当年大闹天宫还用说
+    我喝醉
+    犯了每个规条从不会改过
+    双眼里只有自己
+    有些恶意
+    有些暴力
+    有点着急
+    惹了报应
+    如来随意把我压进五指山下后
+
+    现在我有一千年修炼
+    别想破我的阵七十二变
+    什么凡人或灵魂或妖孽
+    不要阻止我看守着师父他的命
+
+    我有一千年修炼
+    别想破我的阵七十二变
+    什么凡人或灵魂或妖孽
+    记得遇上我的时辰不要太得意
+
+    一路上无论何方妖魔出现都不怕
+    别上当
+    聊斋每一回能背全都一样
+    我脑海四根清净
+    有些正义
+    有些道理
+    有点义气
+    没有忘记
+    我的教训让我看清应该怎么做
+
+    现在我有一千年修炼
+    别想破我的阵七十二变
+    什么凡人或灵魂或妖孽
+    不要阻止我看守着师父他的命
+
+    我有一千年修炼
+    别想破我的阵七十二变
+    什么凡人或灵魂或妖孽
+    记得遇上我的时辰不要太得意
+
+    西游记每一集都看过
+    每一部都很不错
+    特别是周星驰和莫文蔚
+    谁和谁
+    都曾经演过的
+    就是喜剧那幕
+    就是那么幽默
+    还有一个牛魔等着唐僧路过
+
+    我们的主角英雄还没料到自己姓孙
+    他有些私人问题而且还未找到自尊
+    无问题
+    他一定会找到一个月光宝盒
+    然后回到过去
+    就像时光穿梭
+
+    现在我有一千年修炼
+    别想破我的阵七十二变
+    什么凡人或灵魂或妖孽
+    不要阻止我看守着师父他的命
+
+    我有一千年修炼
+    别想破我的阵七十二变
+    什么凡人或灵魂或妖孽
+    记得遇上我的时辰不要太得意
+    -->
+    <!--词：Da Tong Fang 作曲：Da Tong Fang。仅限非商业用途。 -->
+
+    <!-- 未来 --> 
+    <!--    Wei Lai    --> 
+    <!-- KhalilFong --> 
+    <!-- 2012/12/12/ --> 
+    <!--
+    往天上看乌云遮盖了阳光
+    往地下看月亮没有照地堂
+    躺在身旁只有一点点空荡
+    房间的光照不亮你的绝望
+    还有没有希望 不敢想象
+    还有一点爱在未来
+    要等你灌溉 花才开
+
+    最后一滴泪 流出来
+    还有什么事 看不开
+    总有人会离开 有人会悲哀
+    总会有意外
+    总有人会重来 有人会期待
+    总会有喝彩
+
+    往天上看阳光就不会流汗
+    往地下看月光就不会思故乡
+    躺在身旁只有一点点空荡
+    房间的光柔弱却非常温暖
+    换一个角度想就有希望
+    还有一点爱 在未来
+    要等你灌溉 花才开
+
+    最后一滴泪 流出来
+    还有什么事 看不开
+    总有人会离开 有人会悲哀
+    总会有意外
+    总有人会重来 有人会期待
+    总会有喝彩
+
+    看不开就去闪躲
+    躲不开别想太多
+    到底没有什么大不了没大不了
+    结局在电视还没播
+    剧情还要你揣摩
+    千万不要错过 错过
+
+    没有希望因为你没有爱
+    没爱希望就不存在有爱就存在
+    明天的事不用去猜 我用爱来明白
+
+    还有一点爱在未来
+    要等你灌溉 花才开
+    最后一滴泪 流出来
+    还有什么事 看不开
+    总有人会离开 有人会悲哀
+    总会有意外
+    总有人会重来 有人会期待
+    总会有喝彩
+    -->
+    <!--词：Fu 作曲：Da Tong Fang。仅限非商业用途。 -->
+
+    <!-- 手拖手 --> 
+    <!--    Shou Tuo Shou    --> 
+    <!-- KhalilFong --> 
+    <!-- 2006/12/29/ --> 
+    <!--
+    走一步又摔一步
+    小不点儿你不用哭
+    爹娘教会你走路
+
+    走一步又摔一步
+    终于有一个人陪我走到天鹅湖
+    学会了冰上舞
+
+    可爱的可信的
+    感性的伤心的
+    想念了爱上了
+    一个人不再孤单
+    要紧紧的握着别放手
+
+    走一步又摔一步
+    两人世界时乐时苦
+    爱的谜在于克服
+
+    走一步又摔一步
+    不停留的岁月中我们找到满足
+    像一对老糊涂
+
+    可爱的可信的
+    感性的伤心的
+    想念了爱上了
+    一个人不再孤单
+    要紧紧的握着别放手
+
+    可爱的可信的
+    感性的伤心的
+    想念了爱上了
+    每个人会有迷惑和孤单的时候
+    当你觉得累在你身边会有谁
+    愿意和你永远爱相随
+    要紧紧的握着别放开
+    -->
+    <!--词：Da Tong Fang,Ru Lan Liang 作曲：Da Tong Fang。仅限非商业用途。 -->
+
+    <!-- Goodbye MelodyRose --> 
+    <!--    Goodbye Melody Rose    --> 
+    <!-- KhalilFong --> 
+    <!-- 2006/12/29/ --> <!--
+    我们的城市吹着属于空调的疲累
+    怪不得你会点起火来希望一直沉睡
+    就连蔷薇都会变灰我想问你是谁
+    千般不对万念俱灰为何一去不回
+
+    GOODBYE MELODY ROSE
+    我也许不能体会你的憔悴
+    GOODBYE MELODY ROSE
+    我的蔷薇我会陪你等到雨水
+    多留一会给命运一个机会
+    就算不相信完美
+    请相信总会有人为了你掉眼泪
+
+    我们的少年哪个不懂哀愁的滋味
+    怪不得你会垂起头来不怕支离破碎
+    就连蔷薇都会变灰我想问你几岁
+    千般不对万念俱灰为何一去不回
+
+    GOODBYE MELODY ROSE
+    我也许不能体会你的憔悴
+    GOODBYE MELODY ROSE
+    我的蔷薇我会陪你等到雨水
+    多留一会给命运一个机会
+    就算不相信完美
+    请相信总会有人为了你掉眼泪
+
+    你会否后悔我也会惭愧
+    遍地蔷薇没有灿烂已经枯萎
+    我来不及在道别时给你安慰
+    只好在离开后说再会
+
+    GOODBYE MELODY ROSE
+    我也许不能体会你的憔悴
+    GOODBYE MELODY ROSE
+    我的蔷薇我会陪你等到雨水
+    多留一会给命运一个机会
+    就算不相信完美
+    请相信总会有人为了你掉眼泪
+
+    GOODBYE MELODY ROSE
+    GOODBYE MELODY ROSE
+    -->
+    <!--词：Yao Hui Zhou 作曲：Da Tong Fang。仅限非商业用途。 -->
+
+    <!-- 听 --> 
+    <!--    Ting    --> 
+    <!-- KhalilFong --> 
+    <!-- 2016/09/28/ --> <!--
+    听 有太多话要说
+    我说我一言难尽
+    也不要太啰唆
+    我还有一台钢琴
+    它让我打破
+    沉默听来不太安静
+    Yeah
+
+    就算有多少烦恼缠扰
+    我也只要抱着吉他的小蛮腰
+    黑白键在闪耀
+    再没烦扰把我难倒
+
+    听不听到
+    就这个旋律心不心跳
+    再不能言喻并不明了
+    现在只要音乐在萦绕
+    没什么大不了
+
+    我们遇见
+    也不管你说什么语言
+    没有局限歌声漫延
+    我用音乐来谈天
+
+    你再多听一遍
+    听每一个乐器
+    跟我写出一段感情
+    每一个节奏
+    替我画出一帧丹青
+    每一个音符帮我
+    谱出一场幻境
+    让我安心
+    音乐突破了时间空间
+    它会重现最思念的一张容颜
+    或是让人安眠
+    再也不会梦见梦魇
+
+    听不听到
+    就这个旋律心不心跳
+    再不能言喻并不明了
+    现在只要音乐在萦绕
+    没什么大不了
+
+    我们遇见
+    也不管你说什么语言
+    没有局限歌声漫延
+    我用音乐来谈天
+
+    就只有一个理由
+    我屏着呼吸好几口
+    好好去享受这一对双手
+    黑白之间游走
+    声音在我前后左右
+    没有人能够左右这宇宙
+
+    听不听到
+    就这个旋律心不心跳
+    再不能言喻并不明了
+    现在只要音乐在萦绕
+    没什么大不了
+    -->
+    <!--词：C Jun 作曲：Da Tong Fang,Derrick Sepnio。仅限非商业用途。 -->
+
+    <!-- 椰壳 --> 
+    <!--    Ye Ke    --> 
+    <!-- KhalilFong --> 
+    <!-- 2012/12/12/ --> <!--
+    音符 总让我觉得好热
+    我的 风格就是无处不玩乐
+    生活 随时可以哼成一首歌
+    五颜六色
+
+    今夜 灵感就像上升的新月
+    心愿 我就是无处不玩音乐
+    不管 何时何地都跟着感觉 弹奏着
+
+    Na na na na
+    椰壳 也可
+    Na na na na
+    椰壳 也可
+    Na na na na
+    Na na na na
+
+    唱歌自由发挥有什么不可
+    听见这一刻世界是大同的
+    原来 无处不玩乐 不玩音乐 很快乐
+
+    Na na na na
+    椰壳 也可
+    Na na na na
+    椰壳 也可
+    Na na na na
+    Na na na na
+
+    Na na na na
+    椰壳 也可
+    Na na na na
+    椰壳 也可
+    Na na na na
+    Na na na na
+
+    唱歌自由发挥有什么不可
+    听见这一刻世界是大同的
+    原来 无处不玩乐 不玩音乐 很快乐
+    -->
+    <!--词：Da Tong Fang 作曲：Da Tong Fang。仅限非商业用途。 -->
 
 </Application>

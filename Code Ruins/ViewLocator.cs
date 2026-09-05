@@ -1,6 +1,8 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
+
 using Code_Ruins.ViewModels;
+
 using System;
 using System.Diagnostics.CodeAnalysis;
 

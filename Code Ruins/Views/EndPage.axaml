@@ -1,0 +1,44 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Code_Ruins.Views.EndPage"
+             xmlns:viewmodels="using:Code_Ruins.ViewModels"
+             x:DataType="viewmodels:MainWindowViewModel"
+             Background="{Binding ThemeViewModel.Black}"
+             KeyDown="UserControl_KeyDown"
+             >
+    <Grid >
+        <Grid x:Name="Message" Margin="50,50,50,50">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="40" FontFamily="/Assets/#Zpix" Text="Congratulations!"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="40" FontFamily="/Assets/#Zpix" Text="恭喜!~钓鱼的我当然没做噢!"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" Margin="0,100,0,0" FontSize="20" FontFamily="/Assets/#Zpix" Text="游戏到此就暂时结束了"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" Margin="0,40,0,0" FontSize="20" FontFamily="/Assets/#Zpix" Text="后面本来还想设计很多关卡，碍于时间，制作出了两关"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" Margin="0,40,0,0" FontSize="20" FontFamily="/Assets/#Zpix" Text="我们设计出这款&quot;游戏&quot;进行教学编程并不是为了让同学们沉迷游戏"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" Margin="0,40,0,0" FontSize="20" FontFamily="/Assets/#Zpix" Text="反之，我认为找到青少年们更加喜爱的学习方式才是更好的"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" Margin="0,40,0,0" FontSize="20" FontFamily="/Assets/#Zpix" Text="通过游戏来学习，何乐而不为呢?"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" TextWrapping="Wrap" Margin="0,40,0,0" FontSize="20" FontFamily="/Assets/#Zpix" Text="我们的游戏叙事占比大约在30%，游戏性占比大约30%，学习对话和工具占比大约40%"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" Margin="0,40,0,0" FontSize="20" FontFamily="/Assets/#Zpix" Text="平衡游戏和学习是我们的主要目的"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="40" Margin="0,100,0,0" FontFamily="/Assets/#Zpix" Text="Credits"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="40" FontFamily="/Assets/#Zpix" Text="致谢"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="20" Margin="0,100,0,0" FontFamily="/Assets/#Zpix" Text="主游戏代码编写 美术设计与部分美术光影制作 潘学新"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="20" Margin="0,40,0,0" FontFamily="/Assets/#Zpix" Text="质量保证与算法支持 姚逸宸"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="20" Margin="0,40,0,0" FontFamily="/Assets/#Zpix" Text="部分美术光影制作 洪欣敏"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="20" Margin="0,40,0,0" FontFamily="/Assets/#Zpix" Text="UI/UX测试 王梓瑞"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="20" Margin="0,40,0,0" FontFamily="/Assets/#Zpix" Text="感谢游玩!"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="15" Margin="0,100,0,0" FontFamily="/Assets/#Zpix" Text="游戏内剧情纯属虚构"></TextBlock>
+                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="15" Margin="0,10,0,0" FontFamily="/Assets/#Zpix" Text="游戏基于开源平台Microsoft .NET,Avalonia框架,使用C#开发"></TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <Button HorizontalAlignment="Left" Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="10" x:Name="QuitButton" Content="结束征途" Margin="0,40,0,0" Click="Quit_Click"></Button>
+                        <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="15" Margin="10,45,0,0" FontFamily="/Assets/#Zpix" Text="←要在我滚动走之前点击噢~不然就要用esc退出了!"></TextBlock>
+                    </StackPanel>
+                    
+                </StackPanel>
+        </Grid>
+
+
+
+    </Grid>
+</UserControl>

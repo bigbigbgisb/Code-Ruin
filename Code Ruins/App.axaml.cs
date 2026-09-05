@@ -3,8 +3,10 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
+
 using Code_Ruins.ViewModels;
 using Code_Ruins.Views;
+
 using System.Linq;
 
 namespace Code_Ruins

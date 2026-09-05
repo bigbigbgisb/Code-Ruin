@@ -1,6 +1,8 @@
 using Avalonia;
 using Avalonia.Controls;
+
 using Code_Ruins.ViewModels;
+
 using System;
 using System.Diagnostics;
 namespace Code_Ruins.Views
@@ -12,13 +14,23 @@ namespace Code_Ruins.Views
             InitializeComponent();
             Log.Init(AppContext.BaseDirectory, "CodeRuinLog");
             Loaded += MainWindow_Loaded;
+
             
+
+
 
         }
 
         private void MainWindow_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             Command.Init(DataContext as MainWindowViewModel);
+            var screen = this.Screens?.Primary;
+            if (screen is not null)
+            {
+                (DataContext as MainWindowViewModel)!.ScreenHeight = screen.Bounds.Height;
+                Debug.WriteLine((DataContext as MainWindowViewModel)!.ScreenHeight);
+            }
+
         }
     }
 }
