@@ -32,10 +32,7 @@ namespace Code_Ruins;
 public partial class MainGamePage : UserControl
 {
 
-
-
-
-
+    private MainGamePage_SavePage _savePage;
     public MainGamePage()
     {
 
@@ -57,6 +54,7 @@ public partial class MainGamePage : UserControl
 
     private async void UserControl_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
+        _savePage = new() { DataContext = this.DataContext };
         await InitAsync();
     }
     private void WalkingLoop(object? sender, EventArgs e)
@@ -100,6 +98,13 @@ public partial class MainGamePage : UserControl
         ToggleWiki();
     }
 
-
+    private void Quit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        OverridePage.Content = _savePage;
+        if ((App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow is MainWindow mainWindow)
+        {
+            mainWindow.TaskTipBar.IsVisible = false;
+        }
+    }
 
 }

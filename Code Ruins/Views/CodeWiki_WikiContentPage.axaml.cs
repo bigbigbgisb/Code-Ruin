@@ -12,12 +12,18 @@ namespace Code_Ruins.Views
     public partial class CodeWiki_WikiContentPage : UserControl
     {
         private readonly int _id;
+        public CodeWiki_WikiContentPage()
+        {
+        
+        }
+
         public CodeWiki_WikiContentPage(int id)
         {
             InitializeComponent();
             _id = id;
             Loaded += CodeWiki_WikiContentPage_Loaded;
         }
+        
 
         private void CodeWiki_WikiContentPage_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {

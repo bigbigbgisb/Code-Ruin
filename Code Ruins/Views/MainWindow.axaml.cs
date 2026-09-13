@@ -28,7 +28,6 @@ namespace Code_Ruins.Views
             if (screen is not null)
             {
                 (DataContext as MainWindowViewModel)!.ScreenHeight = screen.Bounds.Height;
-                Debug.WriteLine((DataContext as MainWindowViewModel)!.ScreenHeight);
             }
 
         }

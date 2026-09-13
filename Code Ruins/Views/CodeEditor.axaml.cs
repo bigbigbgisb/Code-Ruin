@@ -37,7 +37,7 @@ namespace Code_Ruins;
 public partial class CodeEditor : Window
 {
     private bool isBackspace = false;
-    private Dictionary<string, Func<int?, string>> errorMessage = new()
+    private readonly Dictionary<string, Func<int?, string>> errorMessage = new()
     {
         ["CS1002"] = (int? line) =>
         {

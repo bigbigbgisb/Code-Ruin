@@ -16,6 +16,9 @@ public partial class TaskTipViewModel : ObservableObject
     [ObservableProperty]
     int _margin = 400;
 
+    [ObservableProperty]
+    bool _isVisible = false;
+
     public async Task ShowTaskTipAsync()
     {
         for (int i = 0; i < 40; i++)
@@ -23,6 +26,7 @@ public partial class TaskTipViewModel : ObservableObject
             Margin -= 10;
             await Task.Delay(16);
         }
+        IsVisible = true;
 
     }
     
@@ -33,5 +37,6 @@ public partial class TaskTipViewModel : ObservableObject
             Margin += 10;
             await Task.Delay(16);
         }
+        IsVisible = false; 
     }
 }

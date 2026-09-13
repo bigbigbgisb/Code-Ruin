@@ -47,7 +47,11 @@
             <Image x:Name="ScenePlatform" Source="/Assets/Pictures/SceneOnePlatform.png"  RenderOptions.BitmapInterpolationMode="None" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" ></Image>
             <Image x:Name="ScenePlatformDecoration" ZIndex="1000" Source="/Assets/Pictures/Carne.png"  RenderOptions.BitmapInterpolationMode="None" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" ></Image>
         </Grid>
+
+        <ContentControl x:Name="OverridePage" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></ContentControl>
+
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50"> 
+            <Button x:Name="Quit" Click="Quit_Click" Margin="20" FontFamily="/Assets/#Zpix"  Height="50" Width="50" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}" Foreground="{Binding ThemeViewModel.LightForeground}" Content="🖫" Padding="0" ></Button>
             <Button Click="IdeButton_Click" Margin="20" x:Name="IdeButton" FontFamily="/Assets/#Zpix"  Height="50" Width="50" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}" Foreground="{Binding ThemeViewModel.LightForeground}" Content="&lt;/&gt;" Padding="0" IsVisible="False"></Button>
             <Button Click="WikiButton_Click" Margin="20" x:Name="WikiButton" FontFamily="/Assets/#Zpix"  Height="50" Width="50" Background="{Binding ThemeViewModel.OpacityDarkFillColor}" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}" Foreground="{Binding ThemeViewModel.LightForeground}" Content="W" Padding="0" IsVisible="False"></Button>
         </StackPanel>

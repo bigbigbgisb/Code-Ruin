@@ -8,8 +8,8 @@ namespace Code_Ruins.Views
         public CmdCommandInformation(string returnValue, Action<string[]>? action)
         {
             ReturnValue = returnValue;
-            Action = action ?? Dummy;
+            Action = action ?? _dummy;
         }
-        private readonly Action<string[]> Dummy = _ => { };
+        private readonly Action<string[]> _dummy = _ => { };
     }
 }
