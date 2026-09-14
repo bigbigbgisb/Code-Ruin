@@ -180,6 +180,7 @@ namespace Code_Ruins
         {
             ScenePlatform.RenderTransform = new TranslateTransform(offsetX, offsetY);
             ScenePlatformDecoration.RenderTransform = new TranslateTransform(offsetX, offsetY);
+
         }
 
         void CalculateFps()

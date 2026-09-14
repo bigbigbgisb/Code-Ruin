@@ -15,8 +15,8 @@ namespace Code_Ruins.ViewModels
 {
     public partial class MainWindowViewModel : ObservableObject
     {
-        public ChattingResource ChattingResource { get; } = new();
-
+        [ObservableProperty]
+        ChattingResource _chattingResource = new();
 
         [ObservableProperty]
         int? _screenHeight = null;
@@ -65,8 +65,6 @@ namespace Code_Ruins.ViewModels
         [ObservableProperty]
         private CodeWiki_QuestionsPage _codeWiki_QuestionsPage = new();
 
-        [ObservableProperty]
-        MainGamePage _mainGamePage = new();
 
         [ObservableProperty]
         CodeEditor _codeEditor = new();
@@ -83,8 +81,6 @@ namespace Code_Ruins.ViewModels
         [ObservableProperty]
         BaseSettingsViewModel _baseSettingsViewModel = new();
 
-        [ObservableProperty]
-        IntroducePage introducePage = new();
 
 
 
@@ -96,8 +92,6 @@ namespace Code_Ruins.ViewModels
             CodeWiki.DataContext = this;
             CodeWiki_QuestionsPage.DataContext = this;
             CodeWiki_HomePage.DataContext = this;
-            IntroducePage.DataContext = this;
-            MainGamePage.DataContext = this;
             CodeEditor.DataContext = this;
             ChattingBox.DataContext = this;
             RecentPage = StartPage;

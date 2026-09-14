@@ -141,6 +141,7 @@ namespace Code_Ruins
                     TaskSuccess();
                     mwvm!.ChattingResource.RecentStage = "DataStructuresSuccess";
                     ScenePlatform.Source = new Bitmap("Assets/Pictures/SceneOnePlatformSuccess.png");
+                    ScenePlatform.Tag = "/Assets/Pictures/SceneOnePlatformSuccess.png";
                     mwvm!.ShowThenHideSnackBar("成就 == Oh!你居然修好了吊塔");
                     mwvm!.ChattingBox.ShowAndResetChattingBox();
                     mwvm!.CodeEditor.WindowState = WindowState.Minimized;
@@ -176,7 +177,9 @@ namespace Code_Ruins
         {
 
             ScenePlatform.Source = new Bitmap(sceneBackgroundPath);
+            ScenePlatform.Tag = sceneBackgroundPath;
             ScenePlatformDecoration.Source = new Bitmap(sceneBackgroundDecorationPath);
+            ScenePlatformDecoration.Tag = sceneBackgroundDecorationPath;
             mwvm!.ChattingResource.RecentStage = stage;
             recentMapIndex++;
             recentTask = task;

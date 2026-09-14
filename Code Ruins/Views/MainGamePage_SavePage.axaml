@@ -10,7 +10,7 @@
              
              >
             <Grid>
-                    <Border Opacity="0.3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{Binding ThemeViewModel.Black}"></Border>
+                    <!--<Border Opacity="0.3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{Binding ThemeViewModel.Black}"></Border>-->
                     <Border Background="{Binding ThemeViewModel.OpacityDarkFillColor}"  Height="500" Width="400">
                         <Grid Margin="50">
                             <Grid.RowDefinitions>
@@ -19,9 +19,9 @@
                             </Grid.RowDefinitions>
                             <TextBlock Foreground="{Binding ThemeViewModel.LightFillColor}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/Assets/#Zpix" Grid.Row="0">Code Ruins</TextBlock>
                             <StackPanel Grid.Row="1" >
-                                <Button Foreground="{Binding ThemeViewModel.LightForeground}"  FontSize="13" FontFamily="/Assets/#Zpix" Margin="20,5,20,10" HorizontalAlignment="Stretch"  Content=":wq 保存并退出"></Button>
-                                <Button Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="13"  FontFamily="/Assets/#Zpix" Margin="20,5,20,10" HorizontalAlignment="Stretch"  Content=":q! 直接退出"></Button>
-                                <Button Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="13" FontFamily="/Assets/#Zpix" Margin="20,5,20,10" HorizontalAlignment="Stretch"  Content=":w 存档"></Button>
+                                <Button x:Name="SaveAndQuit" Click="SaveAndQuit_Click" Foreground="{Binding ThemeViewModel.LightForeground}"  FontSize="13" FontFamily="/Assets/#Zpix" Margin="20,5,20,10" HorizontalAlignment="Stretch"  Content=":wq 保存并退出"></Button>
+                                <Button x:Name="Quit" Click="Quit_Click" Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="13"  FontFamily="/Assets/#Zpix" Margin="20,5,20,10" HorizontalAlignment="Stretch"  Content=":q! 直接退出"></Button>
+                                <Button x:Name="Save" Click="Save_Click" Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="13" FontFamily="/Assets/#Zpix" Margin="20,5,20,10" HorizontalAlignment="Stretch"  Content=":w 存档"></Button>
                                 <Button x:Name="Back" Click="Back_Click" Foreground="{Binding ThemeViewModel.LightForeground}" FontSize="13" FontFamily="/Assets/#Zpix" Margin="20,5,20,10" HorizontalAlignment="Stretch"  Content="?? 暂时先不退出"></Button>
                             </StackPanel>
 

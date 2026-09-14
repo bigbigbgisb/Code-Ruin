@@ -31,9 +31,9 @@ namespace Code_Ruins.Views
             e.Handled = true;
         }
 
-        void Quit()
+        async void Quit()
         {
-            (DataContext as MainWindowViewModel)!.RecentPage = (DataContext as MainWindowViewModel)!.StartPage;
+            await (DataContext as MainWindowViewModel)!.ShowThenHideCurtainAsync(1000, () => { (DataContext as MainWindowViewModel)!.RecentPage = (DataContext as MainWindowViewModel)!.StartPage; });
         }
 
         private void Quit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

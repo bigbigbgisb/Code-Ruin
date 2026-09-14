@@ -1,12 +1,14 @@
-﻿using Avalonia;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
+
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
-
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Code_Ruins
 {
@@ -32,10 +34,13 @@ namespace Code_Ruins
         void CalculateAndClampViewport()
         {
             double maxX = Math.Abs(ScenePlatform.Bounds.Width - Bounds.Width);
+            if (maxX == 0) return;
             double maxY = Math.Abs((ScenePlatform.Bounds.Height - Bounds.Height) / 2);
             const double minX = 0;
+           
             offsetX = (int)Math.Clamp(offsetX, -maxX, minX);
             offsetY = (int)Math.Clamp(offsetY, -maxY, maxY + 100);
+
         }
 
         void CalculateAndMoveBackground(PointerEventArgs e)

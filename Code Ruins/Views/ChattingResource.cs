@@ -11,12 +11,12 @@ using System.Text;
 
 namespace Code_Ruins.Views
 {
-    public class ChattingResource()
+    public partial class ChattingResource : ObservableObject
     {
-
-        public string RecentStage { get; set; } = "Start";
-
-        public Bitmap? RecentImage { get; set; } = null;
+        [ObservableProperty]
+        string _recentStage  = "Start";
+        [ObservableProperty]
+        Bitmap? _recentImage  = null;
 
         public Dictionary<string, ChattingLine[]> ChattingText { get; init; } = new()
         {

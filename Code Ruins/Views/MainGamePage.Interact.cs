@@ -1,15 +1,16 @@
-﻿using Avalonia.Media.Imaging;
-
-using Code_Ruins.ViewModels;
-using Code_Ruins.Views;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+
+using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Media.Imaging;
+
+using Code_Ruins.ViewModels;
+using Code_Ruins.Views;
 
 namespace Code_Ruins
 {
@@ -95,7 +96,26 @@ namespace Code_Ruins
             }
         }
 
-        
+        void ToggleQuit()
+        {
+            if ((App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow is not MainWindow mainWindow)
+            {
+                return;
+            }
+            if (OverridePage.Content is null)
+            {
+                OverridePage.Content = _savePage;
+                mainWindow.TaskTipBar.IsVisible = false;
+
+            }
+            else
+            {
+                OverridePage.Content = null;
+                mainWindow.TaskTipBar.IsVisible = (DataContext as MainWindowViewModel)!.TaskTipViewModel.IsVisible;   
+            }
+        }
+
+
     }
 
 

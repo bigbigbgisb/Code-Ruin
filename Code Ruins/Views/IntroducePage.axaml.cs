@@ -10,6 +10,8 @@ using Code_Ruins.Views;
 
 using SkiaSharp;
 
+using System.IO;
+
 using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -27,6 +29,7 @@ public partial class IntroducePage : UserControl
     {
         InitializeComponent();
         Loaded += IntroducePage_Loaded;
+
     }
 
     private async void IntroducePage_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -44,7 +47,8 @@ public partial class IntroducePage : UserControl
     private async void WaitForOutingDoneAndChangeScene()
     {
         await Utils.WaitUntil(() => mwvm!.ChattingBoxViewModel.IsOutingDone);
-        await mwvm!.ShowThenHideCurtainAsync(1000, () => { mwvm!.RecentPage = mwvm!.MainGamePage; });
+        await mwvm!.ShowThenHideCurtainAsync(1000, () => { mwvm!.RecentPage = new MainGamePage(false) { DataContext = this.DataContext }; });
+
         
     }
 }

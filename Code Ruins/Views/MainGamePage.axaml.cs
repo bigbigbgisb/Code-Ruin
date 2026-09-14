@@ -32,11 +32,13 @@ namespace Code_Ruins;
 public partial class MainGamePage : UserControl
 {
 
-    private MainGamePage_SavePage _savePage;
-    public MainGamePage()
+    private MainGamePage_SavePage? _savePage;
+    private readonly bool _isFromSave;
+    public MainGamePage(bool isFromSave)
     {
 
         InitializeComponent();
+        _isFromSave = isFromSave;
         this.Focusable = true;
         this.Focus();
 
@@ -54,8 +56,18 @@ public partial class MainGamePage : UserControl
 
     private async void UserControl_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        _savePage = new() { DataContext = this.DataContext };
-        await InitAsync();
+        _savePage = new(this) { DataContext = this.DataContext };
+        if (!_isFromSave)
+        {
+            await InitAsync();
+        }
+        else
+        {
+            LoadSaveInit();
+            mwvm!.ChattingResource.RecentImage = new Bitmap("Assets/Pictures/Dummy.png");
+        }
+        
+        
     }
     private void WalkingLoop(object? sender, EventArgs e)
     {
@@ -100,11 +112,7 @@ public partial class MainGamePage : UserControl
 
     private void Quit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        OverridePage.Content = _savePage;
-        if ((App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow is MainWindow mainWindow)
-        {
-            mainWindow.TaskTipBar.IsVisible = false;
-        }
+        ToggleQuit();
     }
 
 }

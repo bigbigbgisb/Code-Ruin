@@ -22,6 +22,7 @@ namespace Code_Ruins
         {
             //初始化
             PublicInit();
+            StartTimer();
             ViewportControllerInit();
             MapInit();
             MovementInit();
@@ -38,12 +39,28 @@ namespace Code_Ruins
             await Utils.WaitUntil(() => mwvm!.ChattingBoxViewModel.IsOutingDone);
             mwvm!.TaskTipViewModel.TipText = "任务 - 前往寻找【机器】并重新驱动";
             await mwvm!.TaskTipViewModel.ShowTaskTipAsync();
-            
-            
-
 
         }
 
+        async void LoadSaveInit()
+        {
+            PublicInit();
+            ViewportControllerInit();
+            MapInit();
+            MovementInit();
+            InteractInit();
+            TaskInit();
+            ReadGame();
+            StartTimer();
+        }
+
+        void StartTimer()
+        {
+            _walkingTimer.Tick += WalkingLoop;
+            _walkingTimer.Start();
+            _gameLoopTimer.Tick += Loop;
+            _gameLoopTimer.Start();
+        }
         void PublicInit()
         {
             //显性转换
@@ -52,10 +69,6 @@ namespace Code_Ruins
             _gameLoopTimer.Interval = TimeSpan.FromMilliseconds(16);
             _walkingTimer.Interval = TimeSpan.FromMilliseconds(100);
             //绑定并开启计时器
-            _walkingTimer.Tick += WalkingLoop;
-            _walkingTimer.Start();
-            _gameLoopTimer.Tick += Loop;
-            _gameLoopTimer.Start();
 
         }
 

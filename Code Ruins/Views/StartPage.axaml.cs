@@ -32,13 +32,41 @@ public partial class StartPage : UserControl
     private async void Start_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
 
-
         await (DataContext as MainWindowViewModel)!.ShowThenHideCurtainAsync(1000, () =>
         {
             (DataContext as MainWindowViewModel)!.ChattingResource.RecentStage = "Introduce";
-            (DataContext as MainWindowViewModel)!.RecentPage = (DataContext as MainWindowViewModel)!.IntroducePage;
+            (DataContext as MainWindowViewModel)!.RecentPage = new IntroducePage() { DataContext = this.DataContext };
         });
-        
+
+    }
+
+    private async void LoadSave_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        if (Path.Exists(Path.Combine(AppContext.BaseDirectory, "CodeRuinsSave", "Save.txt")))
+        {
+            await (DataContext as MainWindowViewModel)!.ShowThenHideCurtainAsync(1000, async () =>
+            {
+                (DataContext as MainWindowViewModel)!.ChattingResource.RecentStage = "Introduce";
+                (DataContext as MainWindowViewModel)!.RecentPage = new MainGamePage(true) { DataContext = this.DataContext };
+            });
+            
+        }
+        else
+        {
+            if (LoadSave.Tag is not bool)
+            {
+                LoadSave.Tag = false;
+            }
+            if (LoadSave.Tag is bool b && b)
+            {
+                return;
+            }
+            LoadSave.Content = "你还没有存档~";
+            LoadSave.Tag = true;
+            await Task.Delay(1000);
+            LoadSave.Tag = false;
+            LoadSave.Content = "再续前缘";
+        }
     }
 
     private void Grid_PointerMoved(object? sender, Avalonia.Input.PointerEventArgs e)
@@ -70,4 +98,6 @@ public partial class StartPage : UserControl
         if ((App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime) is not IClassicDesktopStyleApplicationLifetime lifetime) { Log.Warning("异常退出，生命周期未找到，使用Environment.Exit"); Environment.Exit(0); return; }
         lifetime.Shutdown();
     }
+
+    
 }

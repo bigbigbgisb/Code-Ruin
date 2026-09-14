@@ -27,6 +27,14 @@ namespace Code_Ruins.Views
             Loaded += ChattingBox_Loaded;
         }
 
+        public void ResetChattingBox()
+        {
+            mwvm!.ChattingBoxViewModel.ChattingIndex = 0;
+            mwvm!.ChattingBoxViewModel.IsOutingDone = false;
+            mwvm!.ChattingBoxViewModel.RecentText = string.Empty;
+            mwvm!.ChattingResource.RecentImage = new Bitmap("Assets/Pictures/Dummy.png");
+        }
+
         public void ShowAndResetChattingBox()
         {
             mwvm!.ChattingBoxViewModel.ChattingIndex = 0;
