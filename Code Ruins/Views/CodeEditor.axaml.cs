@@ -68,7 +68,6 @@ public partial class CodeEditor : Window
     };
 
     private string GetCleanExceptionInfo(Exception ex)
-
     {
 
         string exceptionString = $"""
@@ -183,7 +182,6 @@ public partial class CodeEditor : Window
                 return;
             }
             if (!string.IsNullOrEmpty(stringWriter.ToString()))
-
             {
                 ChipCodeOutput.Text += stringWriter.ToString();
             }
@@ -220,7 +218,6 @@ public partial class CodeEditor : Window
                 return;
             }
             if (!string.IsNullOrEmpty(stringWriter.ToString()))
-
             {
                 PlayerCodeOutput.Text += stringWriter.ToString();
             }

@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Media.Imaging;
 
 using Code_Ruins.ViewModels;
@@ -14,9 +14,9 @@ namespace Code_Ruins.Views
     public partial class ChattingResource : ObservableObject
     {
         [ObservableProperty]
-        string _recentStage  = "Start";
+        string _recentStage = "Start";
         [ObservableProperty]
-        Bitmap? _recentImage  = null;
+        Bitmap? _recentImage = null;
 
         public Dictionary<string, ChattingLine[]> ChattingText { get; init; } = new()
         {

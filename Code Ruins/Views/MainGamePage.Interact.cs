@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
@@ -54,8 +54,6 @@ namespace Code_Ruins
 
 
             }
-
-
             else
             {
                 ActionPrompt.IsVisible = false;
@@ -111,7 +109,7 @@ namespace Code_Ruins
             else
             {
                 OverridePage.Content = null;
-                mainWindow.TaskTipBar.IsVisible = (DataContext as MainWindowViewModel)!.TaskTipViewModel.IsVisible;   
+                mainWindow.TaskTipBar.IsVisible = (DataContext as MainWindowViewModel)!.TaskTipViewModel.IsVisible;
             }
         }
 

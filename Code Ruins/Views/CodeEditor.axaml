@@ -12,116 +12,116 @@
         ExtendClientAreaToDecorationsHint="True"
         WindowDecorations="BorderOnly"
         x:DataType="viewmodels:MainWindowViewModel"
-            >
-        <Grid>
-            <Border x:Name="TitleBar" Background="{Binding ThemeViewModel.Black}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" PointerPressed="TitleBar_PointerPressed">
-                <Button x:Name="Mini" Click="Mini_Click" Background="{Binding ThemeViewModel.OpacityColor}" VerticalAlignment="Stretch" HorizontalAlignment="Right" Margin="10" Content="-"></Button>
-            </Border>
-            <Grid Margin="0,40,0,0">
+        >
+    <Grid>
+        <Border x:Name="TitleBar" Background="{Binding ThemeViewModel.Black}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" PointerPressed="TitleBar_PointerPressed">
+            <Button x:Name="Mini" Click="Mini_Click" Background="{Binding ThemeViewModel.OpacityColor}" VerticalAlignment="Stretch" HorizontalAlignment="Right" Margin="10" Content="-"></Button>
+        </Border>
+        <Grid Margin="0,40,0,0">
             <Border Background="Transparent"  BorderThickness="5" BorderBrush="{Binding ThemeViewModel.Black}">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                     <Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="130"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Border Background="{Binding ThemeViewModel.DarkFillColor}"  Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Border>
                     <Border Background="{Binding ThemeViewModel.DarkFillColor}" Margin="20" Grid.Row="0" Grid.Column="0">
                         <Grid >
-                             <StackPanel>
+                            <StackPanel>
                                 <Grid>
                                     <TextBlock FontSize="13" Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" Text="Chips Code -- 芯片代码" Margin="10"></TextBlock>
-                                <Button x:Name="RunChipCode" Click="RunChipCode_Click" Margin="5" Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" Padding="10" FontSize="6"  Content="▶" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="2" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}"></Button>
+                                    <Button x:Name="RunChipCode" Click="RunChipCode_Click" Margin="5" Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" Padding="10" FontSize="6"  Content="▶" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="2" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}"></Button>
                                 </Grid>
-                                 
-                                 
-                             </StackPanel>
+
+
+                            </StackPanel>
                             <Border Background="{Binding ThemeViewModel.Black}" Margin="20,60,20,20">
-                                     <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
-                                     <StackPanel>
-                                         <TextBlock  FontSize="10"   FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
-                                         VIM 10.1
-                                     </TextBlock>
-                                     <edit:TextEditor Document="{Binding ChipCodeViewModel.ChipCodeDocument}" WordWrap="False" ShowLineNumbers="True" BorderThickness="0"  IsReadOnly="True"  FontSize="10" x:Name="ChipCode"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
-                                         
-                                     </edit:TextEditor>
-                                     </StackPanel>
-                                     
-                                 </ScrollViewer>
-                                 </Border>
-                            
+                                <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
+                                    <StackPanel>
+                                        <TextBlock  FontSize="10"   FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
+                                            VIM 10.1
+                                        </TextBlock>
+                                        <edit:TextEditor Document="{Binding ChipCodeViewModel.ChipCodeDocument}" WordWrap="False" ShowLineNumbers="True" BorderThickness="0"  IsReadOnly="True"  FontSize="10" x:Name="ChipCode"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
+
+                                        </edit:TextEditor>
+                                    </StackPanel>
+
+                                </ScrollViewer>
+                            </Border>
+
                         </Grid>
-                       
+
                     </Border>
                     <Border Background="{Binding ThemeViewModel.DarkFillColor}" Margin="20" Grid.Row="0" Grid.Column="1">
-                       <Grid>
-                           <StackPanel>
-                               <Grid>
-                                   <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" Text="Your Compiler -- 代码编写与编译器" Margin="10"></TextBlock>
-                                <Button x:Name="RunPlayerCode" Click="RunPlayerCode_Click" Margin="5" Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" Padding="10" FontSize="6"  Content="▶" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="2" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}"></Button>
-                               </Grid>
-                               
-                           </StackPanel>
-                           <Border Background="{Binding ThemeViewModel.Black}"  Margin="20,60,20,20">
-                               
-                               <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
-                                            <StackPanel>
-                                                <TextBlock FontSize="10"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
-                                                    VIM 10.1
-                                                 </TextBlock>
-                                            <edit:TextEditor FontSize="10" KeyDown="PlayerCode_KeyDown" ShowLineNumbers="True" WordWrap="False" x:Name="PlayerCode"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}"  BorderThickness="0">
-                                            
-                                            </edit:TextEditor>
-                                        </StackPanel>
-                                        
-                                            
-                                        
-                                 </ScrollViewer>
-                                 </Border>
-                          
-                       </Grid>
-                        
+                        <Grid>
+                            <StackPanel>
+                                <Grid>
+                                    <TextBlock Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" Text="Your Compiler -- 代码编写与编译器" Margin="10"></TextBlock>
+                                    <Button x:Name="RunPlayerCode" Click="RunPlayerCode_Click" Margin="5" Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" Padding="10" FontSize="6"  Content="▶" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="2" BorderBrush="{Binding ThemeViewModel.DarkBorderColor}"></Button>
+                                </Grid>
+
+                            </StackPanel>
+                            <Border Background="{Binding ThemeViewModel.Black}"  Margin="20,60,20,20">
+
+                                <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
+                                    <StackPanel>
+                                        <TextBlock FontSize="10"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
+                                            VIM 10.1
+                                        </TextBlock>
+                                        <edit:TextEditor FontSize="10" KeyDown="PlayerCode_KeyDown" ShowLineNumbers="True" WordWrap="False" x:Name="PlayerCode"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}"  BorderThickness="0">
+
+                                        </edit:TextEditor>
+                                    </StackPanel>
+
+
+
+                                </ScrollViewer>
+                            </Border>
+
+                        </Grid>
+
                     </Border>
                     <Border Background="{Binding ThemeViewModel.DarkFillColor}" Margin="20,0,20,20" Grid.Row="1" Grid.Column="0">
                         <Border Background="{Binding ThemeViewModel.Black}"  Margin="10">
-                                     <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
-                                            <StackPanel>
-                                                <TextBlock FontSize="10"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
-                                                    OUTPUT
-                                                 </TextBlock>
-                                            <TextBox x:Name="ChipCodeOutput" IsReadOnly="True"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" AcceptsReturn="True" AcceptsTab="True" BorderThickness="0">
-                                            
-                                            </TextBox>
-                                        </StackPanel>
-                                        
-                                            
-                                        
-                                 </ScrollViewer>
-                                 </Border>
+                            <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
+                                <StackPanel>
+                                    <TextBlock FontSize="10"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
+                                        OUTPUT
+                                    </TextBlock>
+                                    <TextBox x:Name="ChipCodeOutput" IsReadOnly="True"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" AcceptsReturn="True" AcceptsTab="True" BorderThickness="0">
+
+                                    </TextBox>
+                                </StackPanel>
+
+
+
+                            </ScrollViewer>
+                        </Border>
                     </Border>
                     <Border Background="{Binding ThemeViewModel.DarkFillColor}" Margin="20,0,20,20" Grid.Row="1" Grid.Column="1">
                         <Border Background="{Binding ThemeViewModel.Black}"  Margin="10">
-                                     <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
-                                            <StackPanel>
-                                                <TextBlock FontSize="10"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
-                                                    OUTPUT
-                                                 </TextBlock>
-                                            <TextBox x:Name="PlayerCodeOutput" IsReadOnly="True"   FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" AcceptsReturn="True" AcceptsTab="True" BorderThickness="0">
-                                            
-                                            </TextBox>
-                                        </StackPanel>
-                                        
-                                            
-                                        
-                                 </ScrollViewer>
-                                 </Border>
+                            <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
+                                <StackPanel>
+                                    <TextBlock FontSize="10"  FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" >
+                                        OUTPUT
+                                    </TextBlock>
+                                    <TextBox x:Name="PlayerCodeOutput" IsReadOnly="True"   FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.LightForeground}" AcceptsReturn="True" AcceptsTab="True" BorderThickness="0">
+
+                                    </TextBox>
+                                </StackPanel>
+
+
+
+                            </ScrollViewer>
+                        </Border>
                     </Border>
                 </Grid>
             </Border>
         </Grid>
-        </Grid>
-        
+    </Grid>
+
 </Window>

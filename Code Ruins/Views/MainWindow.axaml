@@ -11,9 +11,9 @@
         Icon="/Assets/avalonia-logo.ico"
         WindowState="FullScreen"
         Title="Code_Ruins"
-        
+
         >
-    
+
 
     <Grid>
         <Grid.RowDefinitions>
@@ -35,11 +35,11 @@
             </Border.RenderTransform>
             <TextBlock Margin="20,0,20,0" VerticalAlignment="Center" FontSize="15" Foreground="{Binding ThemeViewModel.LightForeground}" FontFamily="/Assets/#Zpix" Text="{Binding TaskTipViewModel.TipText}"></TextBlock>
         </Border>
-        
+
         <Grid Grid.Row="0" Grid.RowSpan="3">
-            
+
             <ContentControl Name="MainContent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="{Binding RecentPage}"/>
-            
+
         </Grid>
     </Grid>
 

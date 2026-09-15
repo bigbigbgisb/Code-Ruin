@@ -1,4 +1,4 @@
-﻿using Avalonia.Media;
+using Avalonia.Media;
 using Avalonia.Media.Imaging;
 
 using Code_Ruins.Views;
@@ -124,7 +124,6 @@ namespace Code_Ruins
                         offsetY -= mwvm!.BaseSettingsViewModel.PlayerSpeed;
                     }
                 }
-
                 catch
                 {
                     //Out of map index

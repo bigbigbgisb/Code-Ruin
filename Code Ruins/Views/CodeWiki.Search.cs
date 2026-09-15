@@ -1,4 +1,4 @@
-﻿using Code_Ruins.ViewModels;
+using Code_Ruins.ViewModels;
 
 using CSScripting;
 

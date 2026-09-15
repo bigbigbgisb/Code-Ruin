@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -32,7 +32,7 @@ public partial class MainGamePage
         public bool IsOutingDone;
         public int ChattingIndex;
         public string RecentStage;
-        
+
     }
     private class ProcessData
     {
@@ -109,7 +109,7 @@ public partial class MainGamePage
                 Map = maps[recentMapIndex].Value,
 
             },
-            
+
             FpsData = new()
             {
                 FpsCount = fpsCount,
@@ -124,9 +124,9 @@ public partial class MainGamePage
                 StandardOutput = mwvm!.ChipCodeViewModel.StandardOutput,
             }
         };
-        string json = JsonSerializer.Serialize<GameData>(gameData,option);
+        string json = JsonSerializer.Serialize<GameData>(gameData, option);
         Directory.CreateDirectory(Path.Combine(AppContext.BaseDirectory, "CodeRuinsSave"));
-        File.WriteAllText(Path.Combine(AppContext.BaseDirectory, "CodeRuinsSave","Save.txt"), json);
+        File.WriteAllText(Path.Combine(AppContext.BaseDirectory, "CodeRuinsSave", "Save.txt"), json);
     }
 
 

@@ -49,7 +49,7 @@ public partial class StartPage : UserControl
                 (DataContext as MainWindowViewModel)!.ChattingResource.RecentStage = "Introduce";
                 (DataContext as MainWindowViewModel)!.RecentPage = new MainGamePage(true) { DataContext = this.DataContext };
             });
-            
+
         }
         else
         {
@@ -99,5 +99,5 @@ public partial class StartPage : UserControl
         lifetime.Shutdown();
     }
 
-    
+
 }

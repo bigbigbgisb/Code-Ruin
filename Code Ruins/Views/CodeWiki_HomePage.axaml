@@ -4,17 +4,17 @@
              x:Class="Code_Ruins.Views.CodeWiki_HomePage"
              x:DataType="viewmodels:MainWindowViewModel"
              >
-        <Grid>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,80,0">
-                <Image Source="/Assets/Pictures/StackBelowFlowIcon.png"  Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" RenderOptions.BitmapInterpolationMode="None"></Image>
-                <StackPanel Orientation="Vertical">
-                    <TextBlock Foreground="{Binding ThemeViewModel.OrangeFillColor}" Text="Welcome to Stack BelowFlow Community!" FontFamily="/Assets/#Zpix" FontSize="30" Margin="0,40,0,0"></TextBlock>
-                    <TextBlock Foreground="{Binding ThemeViewModel.OrangeFillColor}" Text="Try to click &lt;Questions&gt; or Search bar to start your Q&amp;A Tour" FontFamily="/Assets/#Zpix" FontSize="15" Margin="0,5,20,0"></TextBlock>
-                </StackPanel>
-                
-                
-
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,80,0">
+            <Image Source="/Assets/Pictures/StackBelowFlowIcon.png"  Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" RenderOptions.BitmapInterpolationMode="None"></Image>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Foreground="{Binding ThemeViewModel.OrangeFillColor}" Text="Welcome to Stack BelowFlow Community!" FontFamily="/Assets/#Zpix" FontSize="30" Margin="0,40,0,0"></TextBlock>
+                <TextBlock Foreground="{Binding ThemeViewModel.OrangeFillColor}" Text="Try to click &lt;Questions&gt; or Search bar to start your Q&amp;A Tour" FontFamily="/Assets/#Zpix" FontSize="15" Margin="0,5,20,0"></TextBlock>
             </StackPanel>
-            
-        </Grid>
+
+
+
+        </StackPanel>
+
+    </Grid>
 </UserControl>

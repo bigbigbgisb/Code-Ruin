@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Media.Imaging;
 using Avalonia.Threading;
 
@@ -113,7 +113,7 @@ namespace Code_Ruins
         async void SceneTwo()
         {
             await Task.Delay(1000);
-            await mwvm!.ShowThenHideCurtainAsync(1000, () => { ChangeScene("Assets/Pictures/SceneTwoPlatform.png", "Assets/Pictures/Tents.png", "InputAndCalculate", "ArriveAtSlum"); });   
+            await mwvm!.ShowThenHideCurtainAsync(1000, () => { ChangeScene("Assets/Pictures/SceneTwoPlatform.png", "Assets/Pictures/Tents.png", "InputAndCalculate", "ArriveAtSlum"); });
             Debug.WriteLine(recentMapIndex);
             mwvm!.ChattingBox.ShowAndResetChattingBox();
             await Utils.WaitUntil(() => mwvm!.ChattingBoxViewModel.IsOutingDone);
@@ -125,7 +125,7 @@ namespace Code_Ruins
         {
             await Task.Delay(1000);
             await mwvm!.ShowThenHideCurtainAsync(1000, () => { mwvm!.RecentPage = mwvm!.EndPage; });
-            
+
         }
 
 

@@ -3,17 +3,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewmodels="using:Code_Ruins.ViewModels"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              x:Class="Code_Ruins.IntroducePage"
              x:DataType="viewmodels:MainWindowViewModel"
              >
-  <Grid>
-      <Grid.RowDefinitions>
-          <RowDefinition Height="*"></RowDefinition>
-      </Grid.RowDefinitions>
-      <Image x:Name="Picture" Source="\Assets\Pictures\Computers.png" Stretch="UniformToFill"></Image>
-     
-      
-  </Grid>
-    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image x:Name="Picture" Source="\Assets\Pictures\Computers.png" Stretch="UniformToFill"></Image>
+
+
+    </Grid>
+
 </UserControl>

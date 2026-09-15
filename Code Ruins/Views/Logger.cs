@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -28,7 +28,7 @@ namespace Code_Ruins.Views
             string timeNow = DateTime.Now.ToString("yyMMdd");
             string detailTimeNow = DateTime.Now.ToString("yy-MM-dd HH:mm");
             string fullMessage = $"[ {detailTimeNow} ] {type} : {message} {Environment.NewLine}";
-            if(ex is not null)
+            if (ex is not null)
             {
                 fullMessage += ex.StackTrace + ex.Message + Environment.NewLine;
             }

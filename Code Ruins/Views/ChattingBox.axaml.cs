@@ -50,7 +50,7 @@ namespace Code_Ruins.Views
 
         private async void ChattingBoxBorder_PointerPressed(object? sender, Avalonia.Input.PointerPressedEventArgs e)
         {
-            
+
             await OutingSentence();
         }
 
@@ -85,10 +85,11 @@ namespace Code_Ruins.Views
                     return;
 
                 }
-               
+
                 mwvm!.ChattingResource.RecentImage = new Bitmap((mwvm!.ChattingResource.ChattingImage[mwvm!.ChattingResource.RecentStage][mwvm!.ChattingBoxViewModel.ChattingIndex]) ?? "Assets/Pictures/Dummy.png");
-                
+
                 //打字机效果
+
 
                 mwvm!.ChattingBoxViewModel.IsOuting = true;
                 Log.Information($"目前输出{mwvm!.ChattingResource.RecentStage}的第{mwvm!.ChattingBoxViewModel.ChattingIndex + 1}句话");

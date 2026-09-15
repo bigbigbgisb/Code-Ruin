@@ -1,13 +1,11 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Code_Ruins.Views
-{
-    public partial class ThemeViewModel : ObservableObject
-    {
+namespace Code_Ruins.Views {
+    public partial class ThemeViewModel : ObservableObject {
         [ObservableProperty]
         string _black = "#000000";
         [ObservableProperty]

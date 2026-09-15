@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
@@ -29,7 +29,7 @@ public partial class TaskTipViewModel : ObservableObject
         IsVisible = true;
 
     }
-    
+
     public async Task HideTaskTipAsync()
     {
         for (int i = 0; i < 40; i++)
@@ -37,6 +37,6 @@ public partial class TaskTipViewModel : ObservableObject
             Margin += 10;
             await Task.Delay(16);
         }
-        IsVisible = false; 
+        IsVisible = false;
     }
 }

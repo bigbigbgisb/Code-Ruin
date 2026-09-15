@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace Code_Ruins.Views
 {
     public class CmdCommandInformation

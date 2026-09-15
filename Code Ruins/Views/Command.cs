@@ -1,4 +1,4 @@
-﻿using Code_Ruins.ViewModels;
+using Code_Ruins.ViewModels;
 
 using System;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ namespace Code_Ruins.Views
             {
                 action();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 //总不可能重新开了个MW吧
                 Log.Error("MainWindow的ViewModel为null", ex);

@@ -15,7 +15,7 @@ namespace Code_Ruins.Views
             Log.Init(AppContext.BaseDirectory, "CodeRuinLog");
             Loaded += MainWindow_Loaded;
 
-            
+
 
 
 

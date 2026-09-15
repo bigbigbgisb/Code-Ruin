@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -37,7 +37,7 @@ namespace Code_Ruins
             if (maxX == 0) return;
             double maxY = Math.Abs((ScenePlatform.Bounds.Height - Bounds.Height) / 2);
             const double minX = 0;
-           
+
             offsetX = (int)Math.Clamp(offsetX, -maxX, minX);
             offsetY = (int)Math.Clamp(offsetY, -maxY, maxY + 100);
 
@@ -75,6 +75,6 @@ namespace Code_Ruins
 
         }
 
-        
+
     }
 }

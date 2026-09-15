@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
@@ -131,7 +131,7 @@ namespace Code_Ruins.ViewModels
         public async Task ShowCurtainAsync()
         {
             if (ScreenHeight is null) { return; }
-            
+
 
             CurtainIsVisible = true;
             while (!(CurtainHeight > ScreenHeight))

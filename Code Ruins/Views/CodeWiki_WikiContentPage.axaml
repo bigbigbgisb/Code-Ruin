@@ -6,10 +6,10 @@
              x:DataType="viewmodels:MainWindowViewModel"
              >
     <Grid>
-       <Grid.RowDefinitions>
-           <RowDefinition Height="50"></RowDefinition>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
-       </Grid.RowDefinitions>
+        </Grid.RowDefinitions>
         <Button x:Name="Back" Click="Back_Click" Grid.Row="0" Content="⬅ 返回" FontFamily="/Assets/#Zpix" Background="{Binding ThemeViewModel.OpacityColor}" Foreground="{Binding ThemeViewModel.OrangeFillColor}" Height="40"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Margin="20,40,40,0"></Button>
         <StackPanel Grid.Row="1">
             <TextBlock x:Name="Title" TextWrapping="Wrap" FontWeight="Bold" FontFamily="/Assets/#Zpix" Foreground="{Binding ThemeViewModel.Black}" Text="" FontSize="30" Margin="40,40,40,0"></TextBlock>

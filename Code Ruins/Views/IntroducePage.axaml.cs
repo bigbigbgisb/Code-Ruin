@@ -19,21 +19,18 @@ using System.Threading.Tasks;
 
 namespace Code_Ruins;
 
-public partial class IntroducePage : UserControl
-{
+public partial class IntroducePage : UserControl {
 
     private MainWindowViewModel? mwvm;
 
 
-    public IntroducePage()
-    {
+    public IntroducePage() {
         InitializeComponent();
         Loaded += IntroducePage_Loaded;
 
     }
 
-    private async void IntroducePage_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-    {
+    private async void IntroducePage_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e) {
         await Task.Delay(2500);
         mwvm = (DataContext as MainWindowViewModel)!;
         mwvm!.ChattingBox.ShowAndResetChattingBox();
@@ -44,11 +41,10 @@ public partial class IntroducePage : UserControl
 
 
 
-    private async void WaitForOutingDoneAndChangeScene()
-    {
+    private async void WaitForOutingDoneAndChangeScene() {
         await Utils.WaitUntil(() => mwvm!.ChattingBoxViewModel.IsOutingDone);
         await mwvm!.ShowThenHideCurtainAsync(1000, () => { mwvm!.RecentPage = new MainGamePage(false) { DataContext = this.DataContext }; });
 
-        
+
     }
 }

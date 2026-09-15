@@ -14,7 +14,7 @@ namespace Code_Ruins.Views
         private readonly int _id;
         public CodeWiki_WikiContentPage()
         {
-        
+
         }
 
         public CodeWiki_WikiContentPage(int id)
@@ -23,7 +23,7 @@ namespace Code_Ruins.Views
             _id = id;
             Loaded += CodeWiki_WikiContentPage_Loaded;
         }
-        
+
 
         private void CodeWiki_WikiContentPage_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {

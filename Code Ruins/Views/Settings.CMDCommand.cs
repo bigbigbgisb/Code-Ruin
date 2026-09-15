@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 
 using Code_Ruins.ViewModels;
@@ -45,14 +45,14 @@ namespace Code_Ruins.Views
                         //对于参数有键的命令，如HELP XXX
                         keyAndValue.Value[commandAndArgs[1]].Action(commandAndArgs[1..]);
                         CommandHistory.Text += keyAndValue.Value[commandAndArgs[1]].ReturnValue + "\n";
-                        
+
                     }
                     else
                     {
                         //对于自由参数的命令，如CHATTINGSPEED XXX
                         keyAndValue.Value[""].Action(commandAndArgs[1..]);
                         CommandHistory.Text += keyAndValue.Value[""].ReturnValue + "\n";
-                        
+
                     }
 
 
@@ -72,7 +72,6 @@ namespace Code_Ruins.Views
 
 
         void ChangeChattingSpeed(string[] args)
-
         {
             if (args.Length < 1)
             {

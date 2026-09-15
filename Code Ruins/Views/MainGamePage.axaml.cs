@@ -66,8 +66,8 @@ public partial class MainGamePage : UserControl
             LoadSaveInit();
             mwvm!.ChattingResource.RecentImage = new Bitmap("Assets/Pictures/Dummy.png");
         }
-        
-        
+
+
     }
     private void WalkingLoop(object? sender, EventArgs e)
     {
